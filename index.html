@@ -1,0 +1,336 @@
+<html>
+<head>
+	<title>OOPS-Ocean Of Projects</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="lib/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header_layer">
+			<div id="logo"><span>OOPS</span><span onclick="op_menu()" class="fa fa-bars" id="menu_icon"></span></div>
+			<div class="menu">
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Earn</a></li>
+					<li><a href="">Request</a></li>
+					<li><a href="">Contact as</a></li>
+					<li><a href="">Join</a></li>
+				</ul>
+			</div>
+		</div>	
+
+			<div class="search_layer" align="right">
+				<div class="search_box">
+					<form>
+						<input type="text" list="data" placeholder="Search">
+						<span class="fa fa-search"></span>
+					</form>
+				</div>
+			</div>
+			<datalist id="data">
+				<option>demo1</option>
+				<option>demo2</option>
+				<option>demo-n</option>
+			</datalist>
+	</header>
+	<section>
+		<div class="banner">
+			<video muted autoplay loop id="bg_video">
+				<source src="videos/earth.mp4"></source>
+				INTERNET VERY SLOW !
+			</video>
+			<div class="banner_content">
+					<b></b>
+					<div>
+						<div>
+
+							<p>Welcome to<!--  
+								<span class="fa fa-eercast"><span class="ext">cean</span></span><span class="fa fa-eercast"><span class="ext">f</span></span><span class="fa fa-product-hunt"><span class="ext">roject</span></span><span class="fa fa-scribd"></span> -->
+ 							<span id="titlename">OOPS</span>
+
+							</p><br>
+							<small>We offer modern solution for growth your business in online.</small><br>
+							<button class="bttn">Get Started</button>
+							<button class="bttn">My Portfolio</button>
+						</div>
+						
+					</div>
+					<a href="#projects">	
+					<span class="fa fa-arrow-down" title="Dive into Ocean" id="dive-into-ocean" style="color:#fff"></span></a>
+			</div>
+		</div>
+		<a name="projects"></a>
+
+		<!-- BANNER END -->
+		<div class="project_showcase">
+			<div class="heading">
+				<h1>What We Done</h1>
+				<center><p>We use only the latest technologies to ensure the layout is highly flexible, working on different devices and platforms without a hitch. A few of the other features are testimonials, a sticky menu, logo slider, skillbars and services section. If you would like to showcase your location, you can do that, too, with the integration of Google Maps.</p></center>
+			</div>
+			<center>
+			<div class="projects">
+				<br><br>
+				<div class="project" style="background-image:url('images/CB.jpg');">
+					<div class="project-layer" onclick="op_project()">
+						<div>
+							<span class="fa fa-lock"></span><br><br>
+							<p>ChatBox - Real time messaging system</p>
+						</div>
+					</div>
+				</div>
+				<div class="v_line"></div>
+				<div class="project" style="background-image:url('images/GC.jpg');">
+					<div class="project-layer" onclick="op_project()">
+						<div>
+							<span class="fa fa-lock"></span><br><br>
+							<p>Group Chat - Whatsapp Clone</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="v_line"></div>
+				<div class="project" style="background-image:url('images/stackoverflow.png');">
+					<div class="project-layer" onclick="op_project()">
+						<div>
+							<span class="fa fa-lock"></span><br><br>
+							<p>Coversation - Stackoverflow Clone</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="v_line"></div>
+				<div class="project" style="background-image:url('images/msinteriors.jpg');" onclick="window.open('https://www.msinterior.in')">
+					<div class="project-layer"  onclick="window.open('https://msinterior.in','blank')">
+						<div>
+							<span class="fa fa-unlock"></span><br><br>
+							<p>MSinteriors - Professional Services</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="v_line"></div>
+				<div class="project" style="background-image:url('images/supermarket.png');">
+					<div class="project-layer"  onclick="op_project()">
+						<div>
+							<span class="fa fa-lock"></span><br><br>
+							<p>Super Market - Online supermarket to order things</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="v_line"></div>
+				<div class="project" style="background-image:url('images/attendence.png');">
+					<div class="project-layer" onclick="op_project()">
+						<div>
+							<span class="fa fa-lock"></span><br><br>
+							<p>Attendence - Student management system</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="v_line"></div>
+				<div class="project" style="background-image:url('images/email.jpg');">
+					<div class="project-layer" onclick="op_project()">
+						<div>
+							<span class="fa fa-lock"></span><br><br>
+							<p>Real time E-Mail system with other domain.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="v_line"></div>
+				<div class="project" style="background-image:url('images/mini_app.png');">
+					<div class="project-layer" onclick="op_project()">
+						<div>
+							<span class="fa fa-unlock"></span><br><br>
+							<p>Mini apps - Single page web applications </p>
+						</div>
+					</div>
+				</div>
+
+				<div class="v_line"></div>
+				<div class="project" style="background-image:url('images/mini_game.png');">
+					<div class="project-layer" onclick="op_project()">
+						<div>
+							<span class="fa fa-unlock"></span><br><br>
+							<p>Mini Games - Web based games and Multiplayer X-O-X</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</center>
+		</div>
+
+<div class="what-we-do-container">
+		<br><br>
+			<div class="heading">
+				<h1>Our Goal & Features</h1>
+				<center><p>We offer modern solution for growthing your business in online. We deliver all web-based solutions to small startups as well as medium and large enterprises. We specialized in Business website, Domain name & Hosting Registration for business. Our developers keep an eye on the client’s requirements and commit to deliver projects successfully in time.</p></center>
+			</div>
+<br><br>
+			<script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+			<div class="box_container">
+				<div class="box">
+					<lord-icon class="l_icon"
+				    src="https://cdn.lordicon.com/dtgezzsi.json"
+    				trigger="hover"
+   					colors="primary:orange,secondary:#fff">
+					</lord-icon>
+					<h1>CODE</h1>	
+				</div>
+				<div class="box">
+					<lord-icon class="l_icon"
+				    src="https://cdn.lordicon.com/wloilxuq.json"
+				    trigger="hover"
+					colors="primary:orange,secondary:#fff">
+					</lord-icon>
+					<h1>DESIGN</h1>	
+				</div>
+				<div class="box">
+					<lord-icon class="l_icon"
+				    src="https://cdn.lordicon.com/xgeyogar.json"
+				    trigger="hover"
+    				colors="primary:orange">
+					</lord-icon>
+					<h1>FLEXIBLE</h1>	
+				</div>	
+				<div class="box">
+					<lord-icon class="l_icon"
+					src="https://cdn.lordicon.com/kbtmbyzy.json"
+				    trigger="hover"
+   					colors="primary:orange,secondary:#fff">
+					</lord-icon>
+					<h1>TIME</h1>
+				</div>	
+				<div class="box">
+					<lord-icon class="l_icon"
+   					src="https://cdn.lordicon.com/zpxybbhl.json"
+    				trigger="hover"
+   					colors="primary:orange,secondary:#fff">
+					</lord-icon>
+					<h1>24x7</h1>
+				</div>			 
+			</div>
+
+			
+		</div>
+
+		<div class="ordernow">
+<br><br>
+			<div class="heading">
+				<h1>Reache Out</h1>
+				<center><p>Hard-working web developer with a flair for creating elegant solutions in the least amount of time. Developed an ecommerce webapp, customer web portal, documentary launch website, and donations webapp for a local charity. Passionate about full stack developer. Regular attendee of web developer meetups and hackathons</p></center>
+			</div>
+			<br><br>
+			<form id="order_your_site" method="post">
+				<span>Name</span>
+				<br>
+				<div>
+					<input type="text" name="name" required="yes">
+				</div>
+				<br>
+				<span>Subject</span>
+				<br><br>
+				<div class="category">
+					<input type="radio" name="subject_type" id="subject_type1" value="Business Sites">
+					<label for="subject_type1" id="s_t1">Business Site</label>
+					<input type="radio" name="subject_type" id="subject_type2" value="Personal Sites">
+					<label for="subject_type2" id="s_t2">Personal Site</label>
+					<input type="radio" name="subject_type" id="subject_type3" value="E-Commerce Sites">
+					<label for="subject_type3" id="s_t3">E-Commerce Sites</label>
+					<input type="radio" name="subject_type" id="subject_type4" value="College Projects">
+					<label for="subject_type4" id="s_t4">College Projects</label>
+					<input type="radio" name="subject_type" id="subject_type5" value="Front End Work">
+					<label for="subject_type5" id="s_t5">Front End Work</label>
+					<input type="radio" name="subject_type" id="subject_type6" value="Back End Work">
+					<label for="subject_type6" id="s_t6">Back End Work</label>
+					<input type="radio" name="subject_type" id="subject_type7" checked value="Other">
+					<label for="subject_type7" id="s_t7">Other</label>
+				</div>
+				<br><br>
+				<span>Message</span>
+				<br>
+				<div>
+					<textarea id="message" name="body" required="yes"></textarea>
+				</div><br>
+				<div style="text-align:center;">
+					<input type="reset" class="bttn" name="">
+					<input type="submit" class="bttn" name="" onclick="sendmail()" value="Send Mail">
+				</div>
+			</form>
+			<br><br><br><br><br><br><br><br><br><br>
+		</div>
+	</section>
+	<footer>
+
+<div class="chat_icon">
+<span class="fa fa-comments-o"></span>
+</div>
+
+		<center>
+		<div id="line"></div><br><br>
+		<div style="height:50px;display:flex;justify-content:center;align-items:center;">
+		<h1><span class="fa fa-eercast"><span class="ext">cean</span></span><span class="fa fa-eercast"><span class="ext">f</span></span><span class="fa fa-product-hunt"><span class="ext">roject</span></span><span class="fa fa-scribd"></span>
+							</h1>
+							</div>
+						</center>
+						<br><br><br>
+		<div class="footer_content">
+			<div class="c1">
+				<div>
+					<p>Contact info</p>
+					<ul>
+						<li title="Location"><span class="fa fa-map-marker"></span><a href='https://goo.gl/maps/ApKEifM2QQLv5yhK7' target="blank">Thiruneermalai, Chennai-44.</a></li>
+						<li title="E-Mail"><span class="fa fa-envelope"></span><a href='mailto:projectocean101@gmail.com'>projectocean101@gmail.com</a></li>
+						<li title="linkedin"><span class="fa fa-linkedin-square"></span><a href='https://www.linkedin.com/in/project-ocean-367819233' target="blank">Linkedin</a></li>
+						<li title="Github"><span class="fa fa-github"></span><a href='#' target="blank">Github</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<p>Social Medias</p>
+					<ul>
+						<li title="Whatsapp"><span class="fa fa-whatsapp"></span><a href='#'>Whatsapp</a></li>
+						<li title="Instagram"><span class="fa fa-instagram"></span><a href='#'>Instagram</a></li>
+						<li title="Telegram"><span class="fa fa-telegram"></span><a href='#'>Telegram</a></li>
+						<li title="Facebook"><span class="fa fa-facebook-official"></span><a href='#'>Facebook</a></li>
+					</ul>
+				</div>
+			</div>
+		<div class="c1">
+				<div>
+					<p>What we do</p>
+					<ul>
+						<li title="Designing" onclick="document.location='#';"><span class="fa fa-paint-brush"></span>Designing</li>
+						<li title="Developing" onclick="document.location='#';"><span class="fa fa-code"></span>Developing</li>
+						<li title="Hosting" onclick="document.location='#';"><span class="fa fa-database"></span>Hosting</li>
+						<li title="Logo Creation" onclick="document.location='#';"><span class="fa fa-ils"></span>Logo Designing</li>
+					</ul>
+				</div>
+
+				<div>
+					<p>Menu</p>
+					<ul>
+						<li title="Home" onclick="document.location='#';"><span class="fa fa-home"></span>Home</li>
+						<li title="Earn" onclick="document.location='#';"><span class="fa fa-money"></span>Earn</li>
+						<li title="Request" onclick="document.location='#';"><span class="fa fa-file"></span>Request</li>
+						<li title="Join"><span class="fa fa-user-plus"></span>Join</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<br><br><br><br>
+		<div align="center">
+			<p style="color:#555;padding:10px;font-size:10pt;"><span class="fa fa-copyright"></span> Copyright 2022 - All Rights Reserved , OOPS - OceanOfProjectS</p>
+		</div>
+
+	<script src="js/main.js"></script>
+
+
+	</footer>
+</body>
+</html>
