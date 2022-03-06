@@ -18,6 +18,5 @@ function op_menu(){
 	temp++;
 }
 function op_project(){
-	swal('Access Denied','SORRY! YOU ARE NOT ALLOWED TO VIEW THIS PROJECT (Please Contact Admin)','warning')
-//	alert("SORRY! YOU ARE NOT ALLOWED TO VIEW THIS PROJECT")
+	swal('Access Denied','You are not allowed to view this project. (Please Contact Admin)','warning');
 }
