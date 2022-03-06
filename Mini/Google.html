@@ -1,0 +1,263 @@
+<html>
+<head>
+	<title>Google Engine</title>
+	<meta name="viewport" content="width=device-width,initial-scale:0.1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script>
+	var address,temp_address;
+	function s(){
+			address=document.getElementById('t').value;
+		search(address);
+	}
+	document.addEventListener('keydown',function(e){
+		if(e.keyCode==13){
+		address=document.getElementById('t').value;
+		search(address);
+		}
+	});
+	function search(x){
+		if(x!=""&&x!=null){
+			temp_address=x;
+			document.getElementById('t').value=null;
+			window.open('https://'+temp_address,"_blank");
+		}
+	}
+</script>
+<style>
+	*{
+		margin:0px;
+		padding:0px;  
+	}
+	body{
+		background-color:#fff;
+	}
+	.container{
+		height:100vh;
+		background-color:#fff;
+		width:100%;  
+	}
+	#Ename_logo{
+		height:45vh;
+		background-color:#fff;  
+	}
+	p{
+		position:relative;
+		top:130px;
+		left:0px; 
+		display:flex;
+		align-items: center;
+		justify-content: center; 
+		background-color:#fff; 
+	}
+	p span{
+		font-size:65pt;
+		letter-spacing:-5px; 
+		font-weight:1000; 
+	}
+	#search_box{
+/*		position:relative;
+		top:-50px;*/
+		background-color:#fff; 
+		display:flex;
+		height:7vh;
+		border:1px solid rgba(0,0,0,.2);
+		width:40%;
+		border-radius:50px;
+		box-shadow:0px 0px 10px 2px rgba(0,0,0,.1); 
+	}
+	#mic{
+		background-color:transparent;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height:100%;
+		width:50px;
+		border-radius:25px; 
+		box-sizing:border-box;
+	}
+	#mic span{
+		font-size:13pt; 
+	}
+	#searchURL{
+		width:100%;
+	}
+	#searchURL #t{
+		position:relative;
+		top:0px;
+		left:0px;  
+		height:100%;
+		width:100%;
+		padding-left:10px;
+        border:none;
+        font-size:15pt;
+		outline:none;
+		background-color:transparent;
+		font-size:12pt; 
+
+	}
+	#search_icon{  
+		height:100%;
+		width:50px;
+		background-color:transparent;
+		border-radius:25px; 
+		box-sizing:border-box;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#search_box span{
+		color:rgba(75,75,75,1); 
+	}
+
+	input[type="text"]{
+		 
+	}
+
+	.recent_links{
+		height:45vh; 
+		background-color:#fff; 
+	}
+	.links{
+		padding:10px; 
+		background-color:#fff;
+		margin-top:10px; 
+		width:40%; 
+		display:flex;
+		justify-content:space-between;
+		align-items: center;
+		flex-wrap:wrap; 
+	}
+	.links div{
+		height:50px; 
+		padding:30px;
+		margin:5px 2px; 
+		background-color:#fff;  
+		border-radius:5px; 
+		width:50px;
+	}
+	.links div:hover{
+		cursor: pointer;
+		background-color:rgba(0,0,0,.2); 
+	}
+.links div span{
+	padding:10px 13px; 
+	border-radius:50px; 
+	color:#fff; 
+	font-size:15pt; 
+}
+.links div label{
+	position:relative;
+	top:15px;left:-5px; 
+}	
+.customize{
+	margin:10px;
+	position:absolute;
+	right:0px;
+	bottom:0px; 
+	padding:10px;
+	border-radius:30px;
+	background-color:#fff;
+	box-shadow:0px 2px 2px 1px rgba(0,0,0,.3);  
+	color:rgba(26, 115, 232,1); 
+}
+.customize:hover{
+ background-color:rgba(0,256,0,.1);
+ cursor: pointer; 
+}
+
+@media only screen and (max-width:750px){
+		#search_box{
+			width:70%;
+		}
+	.links{
+		width:60%;
+	}
+}
+
+@media only screen and (max-width:590px){
+		#search_box{
+			width:90%;
+		}
+	.links{
+		width:80%;
+	}
+	.customize label{
+		display:none; 
+	}
+}
+@media only screen and (max-width:350px){
+		body,#searchURL{
+		font-size:8pt; ;
+	}
+	#Ename_logo p span{
+		font-size:40px;
+		letter-spacing:-1px;
+	}
+	.links div{
+		padding:10px;
+	}
+	.links div span{
+		font-size: 10pt;
+		padding:10px;
+	}
+}
+
+	</style>
+<body>
+<center>
+	<section class="container">
+	<div id="Ename_logo">
+		<p style="font-family:Century Gothic;" title="Google">
+			<span style="color:rgba(66, 133, 244,1);">G</span>
+			<span style="color:rgba(234, 67, 53,1);">o</span>
+			<span style="color:rgba(251, 188, 5,1);">o</span>
+			<span style="color:rgba(66, 133, 244,1);">g</span>
+			<span style="color:rgba(52, 168, 83,1);">l</span>
+			<span style="color:rgba(234, 67, 53,1);transform:rotate(-20deg);">e</span>
+		</p>
+	</div>
+<div id="search_box">
+	<div id="search_icon" onclick="s()">
+		<span class="fa fa-search"></span>
+	</div>
+	<div id="searchURL">
+		<input type="text" id="t" placeholder="type a URL">	
+	</div>
+	<div id="mic" title="Search by voice">
+		<span class="fa fa-microphone"></span>
+	</div>	
+</div>
+<div class="recent_links">
+	<div class="links">
+		<div onclick="search('www.facebook.com')">
+			<span style="background-color:navy;">F</span><br>
+			<label>Facebook</label>
+		</div>
+		<div onclick="search('www.youtube.com')">
+			<span style="background-color:red;">Y</span><br>
+			<label>YouTube</label>
+		</div>
+		<div onclick="window.open('https://www.google.com/intl/en-GB/gmail/about/','blank')">
+			<span style="background-color:darkred;">M</span><br>
+			<label>Mail</label>
+		</div>
+		<div onclick="search('www.Whatsapp.com')">
+			<span style="background-color:green;">W</span><br>
+			<label>Whatsapp</label>
+		</div>
+		<div>
+			<span class="fa fa-plus" style="background-color:#999; "></span><br>
+			<label>shortcut</label>
+		</div>
+
+</div>
+</div>
+<div class="customize" title="Customize this page">
+	<span class="fa fa-pencil"></span><label>&nbsp;Customize</label>
+</div>
+</section>
+</center>
+
+</body>
+</html>

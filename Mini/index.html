@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mini Work</title>
+		<meta name="viewport" content="width=device-width,initial-scale:0.1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="text/css" href="../images/logo.png">
+	<style type="text/css">
+		*{
+			padding:0px;
+			margin:0px;
+		}
+		header{
+			height:15vh ;
+			width: 100%;
+			background:#124;
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+			padding:0px 10px;
+			color: #ddd;
+			box-sizing: border-box;
+		}
+		section{
+			height:85vh ;
+			width: 100%;
+			background: #123;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			overflow: scroll;
+		}
+		section div{
+			background: #ddd;
+			height:150px;
+			width:150px ;
+			padding:10px;
+			margin:5px 10px;
+			border-radius: 5px;
+			display: flex;
+			justify-content:space-around;
+			align-items: center;
+			flex-direction: column;
+		}
+		section h3{
+			color:#333;
+		}
+		section p{
+			color: grey;
+		}
+		section button{
+			outline: none;
+			border: none;
+			width:100%;
+			padding:5px;
+			cursor: pointer;
+			background:rgba(0, 0, 0, .2) ;
+		}
+		section button:hover{
+			cursor: pointer;
+			background:rgba(256, 200, 0, .8) ;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+<header><h5>Mini Works</h5><h5 class="fa fa-close" onclick="window.close()"></h5></header>
+<section>
+	<div>
+		<h3>Google</h3>
+		<br>
+		<p>Google clone engine</p>
+		<br>
+		<button onclick="window.open('Google.html','blank')">Open</button>
+	</div>
+
+	<div>
+		<h3>RGB Ocean</h3>
+		<br>
+		<p>16777216 Possible colours.</p>
+		<br>
+		<button onclick="window.open('RGBA.html','blank')">Open</button>
+	</div>
+
+	<div>
+		<h3>Calculator</h3>
+		<br>
+		<p>Perform some Calculations.</p>
+		<br>
+		<button onclick="window.open('Calculator.html','blank')">Open</button>
+	</div>
+
+</section>
+</body>
+</html>

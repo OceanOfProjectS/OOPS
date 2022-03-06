@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RGBA FACTORY</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		*{
+			margin:0px;padding: 0px; 
+		}
+		div{
+			height:100vh; 
+			background-color:#2222; 
+			display:flex;
+			justify-content:center;
+			align-items:center; 
+		}
+		table{
+			border-collapse:collapse;
+			border:.5px solid rgba(0,0,0,.2); 
+			width:80%; 
+			background-color:#fff; 
+			text-align: center;
+			color: rgba(0,0,0,.8);
+			box-shadow:5px 5px 10px 0px rgba(0,0,0,.4); 
+		}
+		th,td,#dis{
+			font-size:12pt;
+			font-weight:bold;
+			text-transform:capitalize;
+			letter-spacing:2px;    
+			padding:10px 10px; 
+		}
+		input[type='range']{
+			width:90%; 
+		}
+		#v{text-align: center;
+			outline: none;
+			border:none;
+			background-color: transparent;
+			height:100%
+			width:100%; 
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<div>	
+<table border="1">
+	<tr>
+		<th colspan='2' style="background-color:cyan;">RGBA&nbsp;<span class="fa fa-paint-brush"></span></th>
+	</tr>
+	<tr>
+		<td style="background-color:rgba(255,0,0,.5);">red</td>
+		<td>
+			<input type="range" name="r" id="r" min="0" max="256" value="0" onchange="cr()">
+		</td>
+	</tr>
+	<tr>
+		<td style="background-color:rgba(0,255,0,.5);">green</td>
+		<td>
+			<input type="range" id="g" min="0" max="256" value="0" onchange="cg()">
+		</td>
+	</tr>
+		<tr>
+		<td style="background-color:rgba(0,0,255,.5);">blue</td>
+		<td>
+			<input type="range" id="b" min="0" max="256" value="2" onchange="cb()">
+		</td>
+	</tr>
+		<tr>
+		<td>alpha</td>
+		<td>
+			<input type="range" id="a" min="0" max="10" value="9" onchange="ca()">
+		</td>
+	</tr>	
+		<tr>
+		<td>value</td>
+		<td>
+			<input type="text" id="v" value="rgba(255,255,255.5)" readonly="true">
+		</td>
+	</tr>		
+		<tr>
+		<td colspan="2" id="dis" style="padding:20px; ">
+		</td>
+	</tr>
+</table>
+</div>
+<script type="text/javascript">
+
+
+	var getV;
+	var getR=0;
+	var getG=0;
+	var getB=0;
+	var getA=10;
+	function cr(){
+getR=document.getElementById('r').value;
+setColor();
+	}
+	function cg(){
+getG=document.getElementById('g').value;
+setColor();
+	}
+	function cb(){
+getB=document.getElementById('b').value;
+setColor();
+	}
+	function ca(){
+getA=document.getElementById('a').value;
+setColor();
+	}
+setColor();
+
+	function setColor(){
+
+document.getElementById('dis').style.backgroundColor="rgba("+getR+','+getG+','+getB+','+getalpha(getA)+")";
+document.getElementById('v').value="rgba("+getR+','+getG+','+getB+','+getalpha(getA)+")";
+	}
+	function getalpha(x){
+		if(x==0){
+			return 0;
+		}
+		else if(x>9){
+			return 1;
+
+		}
+		else{
+			return "0."+x;
+
+		}
+	}
+</script>
+</body>
+</html>
