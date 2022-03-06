@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>X-O</title>
+	<meta name="viewport" content="width=device-width,initial-scale:0.1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			background-image:url('images/xo_img.jpg'); 
+			background-size:cover;
+			background-position:center;
+			background-repeat: no-repeat;  
+		}
+		header{
+			height:15vh;
+			display: flex;
+			justify-content: center;
+			align-items: center; 
+			background-color:rgba(0,0,0,.2);
+
+		}
+		header div{
+			height:100%;
+			padding:0px 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color:red;
+		}
+		header .fa{
+			font-size:30pt; 
+			text-shadow:0px 5px 10px rgba(0,0,0,.5); 
+			color:#ddd;
+		}
+
+
+
+		.container{
+			height:85vh;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color:rgba(0,0,0,.2);
+		}
+
+		.layer #row1,#row2,#row3{
+			display: flex;
+			justify-content: center;align-items: center;
+			background-color:transparent;
+		}
+		.layer #row1 div,#row2 div,#row3 div{
+			border-radius:10px; 
+			width:100px;
+			height:125px;
+			margin:2px;
+			font-size:25pt; 
+			background-color:rgba(256,256,256,.7);
+			font-weight: bolder;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+			padding:0px 10px; 
+		}
+		.layer #row1 div:hover,#row2 div:hover,#row3 div:hover{
+			background-color:grey;
+			cursor: pointer; 
+		}
+
+@media only screen and (max-width:400px){
+	.layer #row1 div,.layer #row2 div,.layer #row3 div{
+		height:70px;
+		width:55px ;
+	}
+}
+@media only screen and (max-width:250px){
+	.layer #row1 div,.layer #row2 div,.layer #row3 div{
+		height:50px;
+		width:35px ;
+		font-size: 12pt;
+	}
+}
+
+
+	</style>
+</head>
+<body>
+	<header><span class="fa fa-close"></span><div>-</div><span class="fa fa-circle-o"></span></header>
+	<div class='container'>
+		<p></p>
+		<div class='layer'>
+			<div id="row1">
+			<div id="r11" onclick="put_symbol(11)"></div>
+			<div id="r12" onclick="put_symbol(12)"></div>
+			<div id="r13" onclick="put_symbol(13)"></div>	
+			</div>
+			<div id="row2">
+			<div id="r21" onclick="put_symbol(21)"></div>
+			<div id="r22" onclick="put_symbol(22)"></div>
+			<div id="r23" onclick="put_symbol(23)"></div>
+			</div>
+			<div id="row3">
+			<div id="r31" onclick="put_symbol(31)"></div>
+			<div id="r32" onclick="put_symbol(32)"></div>
+			<div id="r33" onclick="put_symbol(33)"></div>
+			</div>
+		</div>
+		<div id="hidden_data" hidden="true">
+			<span class='fa' id="x_symbol">&#10006;</span>
+<span class='fa' id="o_symbol">&#9711;</span>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var temp=0,range=1;
+		function put_symbol(x){
+			if(check_symbol_exists(x)){
+				if(temp%2==0){
+					document.getElementById('r'+x).innerHTML="&#10006";
+				}
+				else{
+					document.getElementById('r'+x).innerHTML="&#9711";
+				}
+				if_win();
+				temp+=1;
+								
+			}
+			else{
+ alert('Sorry!.. Already used !!!')
+
+			}	
+		}
+
+		function check_symbol_exists(x){
+			if(document.getElementById('r'+x).innerText==document.getElementById('o_symbol').innerText||document.getElementById('r'+x).innerText==document.getElementById('x_symbol').innerText){
+				return 0;
+			}
+			else{
+				return 1;
+			}
+
+		}
+
+/*
+8 level checkup
+----------------
+1) level 1   -  row1
+2) level 2  -  row2
+3) level 3  -  row3
+4) level 4  -  column1
+5) level 5  -  column2
+6) level 6  -  column3
+7) level 7  -  top_left to right_bottom cross
+8) level 8  -  op_right to left_bottom cross
+
+*/
+var x_sym=document.getElementById('x_symbol').innerText;
+var o_sym=document.getElementById('o_symbol').innerText;
+var r11;
+var r12;
+var r13;
+var r21;
+var r22;
+var r23;
+var r31;
+var r32;
+var r33;
+
+function if_win(){
+r11=document.getElementById('r11').innerText;
+r12=document.getElementById('r12').innerText;
+r13=document.getElementById('r13').innerText;
+r21=document.getElementById('r21').innerText;
+r22=document.getElementById('r22').innerText;
+r23=document.getElementById('r23').innerText;
+r31=document.getElementById('r31').innerText;
+r32=document.getElementById('r32').innerText;
+r33=document.getElementById('r33').innerText;
+level_1();
+function level_1(){
+	if(r11 == x_sym && r12 == x_sym && r13 == x_sym){
+		win_dis(x_sym,"r11","r12","r13");
+	}
+	else if(r11 == o_sym && r12 == o_sym && r13 == o_sym){
+		win_dis(o_sym,"r11","r12","r13");
+	}
+	level_2();
+}
+
+function level_2(){
+	if(r21 == x_sym && r22 == x_sym && r23 == x_sym){
+		win_dis(x_sym,"r21","r22","r23");
+	}
+	else if(r21 == o_sym && r22 == o_sym && r23 == o_sym){
+		win_dis(o_sym,"r21","r22","r23");
+	}
+	level_3();	
+}
+
+function level_3(){
+	if(r31 == x_sym && r32 == x_sym && r33 == x_sym){
+		win_dis(x_sym,"r31","r32","r33");
+	}
+	else if(r31 == o_sym && r32 == o_sym && r33 == o_sym){
+		win_dis(o_sym,"r31","r32","r33");
+	}	
+	level_4();
+}
+
+function level_4(){
+	if(r11 == x_sym && r21 == x_sym && r31 == x_sym){
+		win_dis(x_sym,"r11","r21","r31");
+	}
+	else if(r11 == o_sym && r21 == o_sym && r31 == o_sym){
+		win_dis(o_sym,"r11","r21","r31");
+	}
+	level_5();	
+}
+
+function level_5(){
+	if(r12 == x_sym && r22 == x_sym && r32 == x_sym){
+		win_dis(x_sym,"r12","r22","r32");
+	}
+	else if(r12 == o_sym && r22 == o_sym && r32 == o_sym){
+		win_dis(o_sym,"r12","r22","r32");
+	}
+	level_6();	
+}
+
+function level_6(){
+	if(r13 == x_sym && r23 == x_sym && r33 == x_sym){
+		win_dis(x_sym,"r13","r23","r33");
+	}
+	else if(r13 == o_sym && r23 == o_sym && r33 == o_sym){
+		win_dis(o_sym,"r13","r23","r33");
+	}
+	level_7();	
+}
+function level_7(){
+	if(r11 == x_sym && r22 == x_sym && r33 == x_sym){
+		win_dis(x_sym,"r11","r22","r33");
+	}
+	else if(r11 == o_sym && r22 == o_sym && r33 == o_sym){
+		win_dis(o_sym,"r11","r22","r33");
+	}
+	level_8();	
+}
+function level_8(){
+	if(r13 == x_sym && r22 == x_sym && r31 == x_sym){
+		win_dis(x_sym,"r13","r22","r31");
+	}
+	else if(r13 == o_sym && r22 == o_sym && r31 == o_sym){
+		win_dis(o_sym,"r13","r22","r31");
+	}
+}
+	if(range==9){
+		setTimeout(function(){alert("Match DRAW");location.reload();},500);
+	}
+	else{
+		range+=1;
+	}
+}
+function win_dis(tmp,r1,r2,r3){
+ document.getElementById(r1).style.backgroundColor='rgba(0,256,100,1)';
+ document.getElementById(r2).style.backgroundColor='rgba(0,256,100,1)';
+ document.getElementById(r3).style.backgroundColor='rgba(0,256,100,1)';	
+ setTimeout(function(){alert(tmp+" is WIN the Game .. !");location.reload();},200);
+}
+
+
+	</script>
+</body>
+</html>

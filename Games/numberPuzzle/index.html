@@ -1,0 +1,420 @@
+<html>
+<head>
+			<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Number Puzzle</title>
+	<style>
+		*{transition:.5s;
+			margin:0px;
+			padding: 0px;
+			-ms-user-select:none; 
+		}
+		body{
+			background-image:url('BG.jpeg');
+			background-position:fixed;
+			background-size:cover;  
+		}
+		#mainTitle{
+			font-size:20pt;
+			font-family: sans-serif;
+			color:#ddd;
+
+		}
+		.container{
+			height:100%; 
+			width:100%;
+			background-image:radial-gradient(rgba(0,0,0,.9),rgba(0,0,0,.2)); 
+			
+		}
+		table{	cursor:pointer;
+			border:1px inset #fff;
+			border-radius:10px;
+			}
+		td{
+			left:100px;
+			padding:20px 20px; 
+			border:1px solid #fff;
+			font-size:30px;
+			font-family:san-serif;  
+			}
+		#t2 td{background-color:lightgreen;}	
+		#r1,#r2,#r3,#r4,#r5,#r6,#r7,#r8{
+			border-radius:10px;
+			background-color:#ddd; 
+			text-align:center;
+padding:7% 25px;
+
+		}
+#r9{	background-color:#000;color:#000; 
+			text-align:center;
+		border-radius:10px;
+ padding:7% 25px;
+		}
+
+#move{
+	padding:3px 15px; 
+	background:inherit; 
+	box-shadow:0px 0px 5px 0px #fff inset;  
+text-align:center;
+color:#fff;font-size:10pt;
+font-family: sans-serif;
+border-radius:15px;
+}
+
+@media only screen and (max-width:250px ){
+	#r1,#r2,#r3,#r4,#r5,#r6,#r7,#r8,#r9{
+		font-size: 10pt;
+		padding:10px 15px;
+	}
+	#mainTitle{
+		font-size: 13pt;
+	}
+}
+
+	</style>
+<script>
+var moves=0;
+function m(){moves+=1;
+document.getElementById('move').innerHTML="Moves : "+moves;
+return;
+}
+
+function r1(){		/*Function r1*/
+var r1n1,r1n2,c1;
+r1n1=document.getElementById('r2');
+r1n2=document.getElementById('r4');
+c1=document.getElementById('r1');
+if(r1n1.textContent==''||r1n1.textContent==null){
+r1n1.style.color="#000";
+r1n1.style.backgroundColor="#ddd";
+r1n1.textContent=c1.textContent;
+c1.textContent='';
+c1.style.color="#000";
+c1.style.backgroundColor="#000";
+m();win();}
+else if(r1n2.textContent==''||r1n2.textContent==null){
+r1n2.style.color="#000";
+r1n2.style.backgroundColor="#ddd";
+r1n2.textContent=c1.textContent;
+c1.textContent='';
+c1.style.color="#000";
+c1.style.backgroundColor="#000";
+m();win();}
+}
+
+
+function r2(){		/*Function r2*/
+var r2n1,r2n2,r2n3,c2;
+r2n1=document.getElementById('r1');
+r2n2=document.getElementById('r5');
+r2n3=document.getElementById('r3');
+c2=document.getElementById('r2');
+if(r2n1.textContent==''||r2n1.textContent==null){
+r2n1.style.color="#000";
+r2n1.style.backgroundColor="#ddd";
+r2n1.textContent=c2.textContent;
+c2.textContent='';
+c2.style.color="#000";
+c2.style.backgroundColor="#000";
+m();win();}
+else if(r2n2.textContent==''||r2n2.textContent==null){
+r2n2.style.color="#000";
+r2n2.style.backgroundColor="#ddd";
+r2n2.textContent=c2.textContent;
+c2.textContent='';
+c2.style.color="#000";
+c2.style.backgroundColor="#000";
+m();win();}
+else if(r2n3.textContent==''||r2n3.textContent==null){
+r2n3.style.color="#000";
+r2n3.style.backgroundColor="#ddd";
+r2n3.textContent=c2.textContent;
+c2.textContent='';
+c2.style.color="#000";
+c2.style.backgroundColor="#000";
+m();win();}
+}
+
+function r3(){		/*Function r3*/
+var r3n1,r3n2,c3;
+r3n1=document.getElementById('r2');
+r3n2=document.getElementById('r6');
+c3=document.getElementById('r3');
+if(r3n1.textContent==''||r3n1.textContent==null){
+r3n1.style.color="#000";
+r3n1.style.backgroundColor="#ddd";
+r3n1.textContent=c3.textContent;
+c3.textContent='';
+c3.style.color="#000";
+c3.style.backgroundColor="#000";
+m();win();}
+else if(r3n2.textContent==''||r3n2.textContent==null){
+r3n2.style.color="#000";
+r3n2.style.backgroundColor="#ddd";
+r3n2.textContent=c3.textContent;
+c3.textContent='';
+c3.style.color="#000";
+c3.style.backgroundColor="#000";
+m();win();}
+}
+
+function r4(){		/*Function r4*/
+var r4n1,r4n2,r4n3,c4;
+r4n1=document.getElementById('r1');
+r4n2=document.getElementById('r5');
+r4n3=document.getElementById('r7');
+c4=document.getElementById('r4');
+if(r4n1.textContent==''||r4n1.textContent==null){
+r4n1.style.color="#000";
+r4n1.style.backgroundColor="#ddd";
+r4n1.textContent=c4.textContent;
+c4.textContent='';
+c4.style.color="#000";
+c4.style.backgroundColor="#000";
+m();win();}
+else if(r4n2.textContent==''||r4n2.textContent==null){
+r4n2.style.color="#000";
+r4n2.style.backgroundColor="#ddd";
+r4n2.textContent=c4.textContent;
+c4.textContent='';
+c4.style.color="#000";
+c4.style.backgroundColor="#000";
+m();win();}
+else if(r4n3.textContent==''||r4n3.textContent==null){
+r4n3.style.color="#000";
+r4n3.style.backgroundColor="#ddd";
+r4n3.textContent=c4.textContent;
+c4.textContent='';
+c4.style.color="#000";
+c4.style.backgroundColor="#000";
+m();win();}
+}
+
+
+function r5(){		/*Function r5*/
+var r5n1,r5n2,r5n3,r5n4,c5;
+r5n1=document.getElementById('r2');
+r5n2=document.getElementById('r4');
+r5n3=document.getElementById('r6');
+r5n4=document.getElementById('r8');
+c5=document.getElementById('r5');
+if(r5n1.textContent==''||r5n1.textContent==null){
+r5n1.style.color="#000";
+r5n1.style.backgroundColor="#ddd";
+r5n1.textContent=c5.textContent;
+c5.textContent='';
+c5.style.color="#000";
+c5.style.backgroundColor="#000";
+m();win();}
+else if(r5n2.textContent==''||r5n2.textContent==null){
+r5n2.style.color="#000";
+r5n2.style.backgroundColor="#ddd";
+r5n2.textContent=c5.textContent;
+c5.textContent='';
+c5.style.color="#000";
+c5.style.backgroundColor="#000";
+m();win();}
+else if(r5n3.textContent==''||r5n3.textContent==null){
+r5n3.style.color="#000";
+r5n3.style.backgroundColor="#ddd";
+r5n3.textContent=c5.textContent;
+c5.textContent='';
+c5.style.color="#000";
+c5.style.backgroundColor="#000";
+m();win();}
+else if(r5n4.textContent==''||r5n4.textContent==null){
+r5n4.style.color="#000";
+r5n4.style.backgroundColor="#ddd";
+r5n4.textContent=c5.textContent;
+c5.textContent='';
+c5.style.color="#000";
+c5.style.backgroundColor="#000";
+m();win();}
+}
+
+function r6(){		/*Function r6*/
+var r6n1,r6n2,r6n3,c6;
+r6n1=document.getElementById('r3');
+r6n2=document.getElementById('r5');
+r6n3=document.getElementById('r9');
+c6=document.getElementById('r6');
+if(r6n1.textContent==''||r6n1.textContent==null){
+r6n1.style.color="#000";
+r6n1.style.backgroundColor="#ddd";
+r6n1.textContent=c6.textContent;
+c6.textContent='';
+c6.style.color="#000";
+c6.style.backgroundColor="#000";
+m();win();}
+else if(r6n2.textContent==''||r6n2.textContent==null){
+r6n2.style.color="#000";
+r6n2.style.backgroundColor="#ddd";
+r6n2.textContent=c6.textContent;
+c6.textContent='';
+c6.style.color="#000";
+c6.style.backgroundColor="#000";
+m();win();}
+else if(r6n3.textContent==''||r6n3.textContent==null){
+r6n3.style.color="#000";
+r6n3.style.backgroundColor="#ddd";
+r6n3.textContent=c6.textContent;
+c6.textContent='';
+c6.style.color="#000";
+c6.style.backgroundColor="#000";
+m();win();}
+}
+
+
+function r7(){		/*Function r7*/
+var r7n1,r7n2,c7;
+r7n1=document.getElementById('r4');
+r7n2=document.getElementById('r8');
+c7=document.getElementById('r7');
+if(r7n1.textContent==''||r7n1.textContent==null){
+r7n1.style.color="#000";
+r7n1.style.backgroundColor="#ddd";
+r7n1.textContent=c7.textContent;
+c7.textContent='';
+c7.style.color="#000";
+c7.style.backgroundColor="#000";
+m();win();}
+else if(r7n2.textContent==''||r7n2.textContent==null){
+r7n2.style.color="#000";
+r7n2.style.backgroundColor="#ddd";
+r7n2.textContent=c7.textContent;
+c7.textContent='';
+c7.style.color="#000";
+c7.style.backgroundColor="#000";
+m();win();}
+}
+
+function r8(){		/*Function r8*/
+var r8n1,r8n2,r8n3,c8;
+r8n1=document.getElementById('r7');
+r8n2=document.getElementById('r5');
+r8n3=document.getElementById('r9');
+c8=document.getElementById('r8');
+if(r8n1.textContent==''||r8n1.textContent==null){
+r8n1.style.color="#000";
+r8n1.style.backgroundColor="#ddd";
+r8n1.textContent=c8.textContent;
+c8.textContent='';
+c8.style.color="#000";
+c8.style.backgroundColor="#000";
+m();win();}
+else if(r8n2.textContent==''||r8n2.textContent==null){
+r8n2.style.color="#000";
+r8n2.style.backgroundColor="#ddd";
+r8n2.textContent=c8.textContent;
+c8.textContent='';
+c8.style.color="#000";
+c8.style.backgroundColor="#000";
+m();
+win();}
+else if(r8n3.textContent==''||r8n3.textContent==null){m();
+r8n3.style.color="#000";
+r8n3.style.backgroundColor="#ddd";
+r8n3.textContent=c8.textContent;
+c8.textContent='';
+c8.style.color="#000";
+c8.style.backgroundColor="#000";
+win();}
+}
+
+function r9(){		/*Function r9*/
+var r9n1,r9n2,c9;
+r9n1=document.getElementById('r6');
+r9n2=document.getElementById('r8');
+c9=document.getElementById('r9');
+if(r9n1.textContent==''||r9n1.textContent==null){
+r9n1.style.color="#000";
+r9n1.style.backgroundColor="#ddd";
+r9n1.textContent=c9.textContent;
+c9.textContent='';
+c9.style.color="#000";
+c9.style.backgroundColor="#000";
+m();win();
+}
+else if(r9n2.textContent==''||r9n2.textContent==null){
+r9n2.style.color="#000";
+r9n2.style.backgroundColor="#ddd";
+r9n2.textContent=c9.textContent;
+c9.textContent='';
+c9.style.color="#000";
+c9.style.backgroundColor="#000";
+m();win();
+}
+}
+
+function win(){
+var r1,r2,r3,r4,r5,r6,r7,r8;
+r1=document.getElementById('r1');
+r2=document.getElementById('r2');
+r3=document.getElementById('r3');
+r4=document.getElementById('r4');
+r5=document.getElementById('r5');
+r6=document.getElementById('r6');
+r7=document.getElementById('r7');
+r8=document.getElementById('r8');
+if(r1.textContent=='1'&&r2.textContent=='2'&&r3.textContent=='3'&&r4.textContent=='4'&&r5.textContent=='5'&&r6.textContent=='6'&&r7.textContent=='7'&&r8.textContent=='8')
+{
+alert("YOU WIN !!!");
+}
+}
+
+</script>
+</head>
+<body>
+<div class="container" align="center"><br><br><br>
+	<strong id="mainTitle">Number Puzzle</strong>
+	<br><br><center><strong id="move">Moves : 0</strong><br><br>
+<table id="t" bgcolor="#555">
+		<th>
+		<tr>
+			<td id="r1" onclick="r1()" onmouseover="r1()">7</td>
+			<td id="r2" onclick="r2()" onmouseover="r2()">4</td>
+			<td id="r3" onclick="r3()" onmouseover="r3()">1</td>						
+		</tr>
+		</th>
+		<th>
+		<tr>
+			<td id="r4" onclick="r4()" onmouseover="r4()">3</td>			
+			<td id="r5" onclick="r5()" onmouseover="r5()">6</td>
+			<td id="r6" onclick="r6()" onmouseover="r6()">5</td>			
+		</tr>
+		</th>
+		<th>
+		<tr>
+			<td id="r7" onclick="r7()" onmouseover="r7()">2</td>			
+			<td id="r8" onclick="r8()" onmouseover="r8()">8</td>
+			<td id="r9" onclick="r9()" onmouseover="r9()"></td>			
+		</tr>
+		</th>				
+	</table><br>
+	<p style="color:white;font-size:13pt;">Convert into&nbsp;&nbsp;&nbsp;&nbsp;&#8659;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+		<br><table id="t2">
+		<th>
+		<tr>
+			<td id="r1">1</td>
+			<td id="r2">2</td>
+			<td id="r3">3</td>						
+		</tr>
+		</th>
+		<th>
+		<tr>
+			<td id="r4">4</td>			
+			<td id="r5">5</td>
+			<td id="r6">6</td>			
+		</tr>
+		</th>
+		<th>
+		<tr>
+			<td id="r7">7</td>			
+			<td id="r8">8</td>
+			<td id="r9" style="background-color:transparent;"></td>			
+		</tr>
+		</th>				
+	</table>
+</div></button>
+</center>
+</body>
+</html>

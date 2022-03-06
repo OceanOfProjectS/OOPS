@@ -1,0 +1,458 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Colour Fill</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="../lib/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
+
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		body{
+			background-image:linear-gradient(0deg,#000,#123,#123),url('bg1.jpg');
+		}
+		header{
+			display: flex;
+			justify-content:space-around;
+			align-items: center;
+			height:20vh;
+			width: 100%;
+			background-color:#123;
+		}
+		header h1{
+			font-family: 'Fruktur', cursive;font-size:40pt;font-weight:normal;color:rgba(256,256,256,.4)
+		}
+		header button{
+			padding:5px;
+			border: none;
+			background-color:#999;
+		}
+		header button:hover{
+			background-color:#fff;
+			cursor: pointer;
+
+		}
+		section{
+			display: flex;
+			justify-content:space-around;
+			align-items: center;
+			height:80vh;
+			width: 100%;
+			flex-direction:column;
+		}
+		section .row1,.row2,.row3{
+			display: flex;
+			justify-content:space-around;
+			align-items: center;			
+			width:100%;
+		}
+		#dis_msg_box{
+	padding:10px 20px; 
+	position: absolute;top:0px;
+	left:0px;
+	z-index:3;
+	text-align: center;
+	display: none;
+	font-size:10pt;
+	font-weight: bolder;
+	border-radius:5px;
+}
+		.can-layer{
+			height:140px;
+			width:50px;
+			border:4px solid transparent;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction:column;
+			border-top: none;
+			border-radius:0px 0px 50px 50px;
+			overflow: hidden;
+			transition: .2s;
+			cursor: pointer;
+			background-color:rgba(256,250,256,.5);
+			box-shadow:10px 0px 10px 0px rgba(0,0,0,.5) inset,
+			0px -10px 10px 0px rgba(0,0,0,.5) inset;
+		}
+
+		.inner-cell{
+			width:100%;
+			flex: 1;
+			transition: .5s;
+			border-right:2px solid #333;
+			box-shadow:10px 0px 20px 0px rgba(0,0,0,.8) inset,		
+			-5px 0px 5px 0px #fff inset;
+			border-radius: 40px;
+		}
+		.fa{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size:20pt;
+			padding:5px;
+//			text-shadow:0px 0px 1px #000;
+			color:rgba(256,256,256,.2);
+		}
+.fa-check-circle-o{
+			background-color:rgba(150,111,51,1);
+			border-radius: 0px;
+		}
+		.active{
+			border: 4px solid transparent;
+			border-top: none;
+			animation:dm 1s ease-in infinite;
+		}
+		@keyframes dm{
+			0%{
+			box-shadow: 0px 0px 10px 2px lime;
+			}			
+			50%{
+			box-shadow: 0px 0px 0px 0px lime;
+			}
+			100%{
+			box-shadow: 0px 0px 10px 2px lime;
+			}
+		}
+
+@media only screen and (max-width:655px){
+.can-layer{
+			height:110px;
+			width:35px;
+			font-size: 10pt;
+			border:2px solid transparent;
+			box-shadow:10px 0px 5px 0px rgba(0,0,0,.5) inset,
+			0px -10px 5px 0px rgba(0,0,0,.5) inset;
+
+	}
+	.inner-cell{
+		font-size: 10pt;
+	}
+}
+@media only screen and (max-width:400px){
+	header h1{
+		font-size: 20pt;
+	}
+}
+@media only screen and (max-width:250px){
+	header h1{
+		font-size:15pt;
+	}
+}
+
+	</style>
+</head>
+<body>
+	<center>
+	<header>
+	<h1>Colour Box</h1>
+		<div style="text-align:left;font-weight: bolder;color:rgba(256,256,256,.4);">
+		<p id="filled_box">Filled : 00</p>
+		<p id="moves">Moves : 00</p>
+		</div>	
+	</header>	
+	<div id="dis_msg_box">
+		<div id="msg_content_to_display"></div>
+	</div>
+<section>
+<div class="row1">
+	<div class="can-layer" id="box_1" onclick="fill_box(1)">
+	<div class="inner-cell fa fa-check-circle-o" id="box1-first"></div>
+	<div class="inner-cell" id="box1-1"></div>
+	<div class="inner-cell" id="box1-2"></div>
+	<div class="inner-cell" id="box1-3"></div>
+	<div class="inner-cell" id="box1-4"></div>
+</div>
+<div class="can-layer" id="box_2" onclick="fill_box(2)">
+	<div class="inner-cell fa fa-check-circle-o" id="box2-first"></div>
+	<div class="inner-cell" id="box2-1"></div>
+	<div class="inner-cell" id="box2-2"></div>
+	<div class="inner-cell" id="box2-3"></div>
+	<div class="inner-cell" id="box2-4"></div>
+</div>
+<div class="can-layer" id="box_3" onclick="fill_box(3)">
+	<div class="inner-cell fa fa-check-circle-o" id="box3-first"></div>
+	<div class="inner-cell" id="box3-1"></div>
+	<div class="inner-cell" id="box3-2"></div>
+	<div class="inner-cell" id="box3-3"></div>
+	<div class="inner-cell" id="box3-4"></div>
+</div>
+</div>
+<div class="row2">
+<div class="can-layer" id="box_4" onclick="fill_box(4)">
+	<div class="inner-cell fa fa-check-circle-o" id="box4-first"></div>
+	<div class="inner-cell" id="box4-1"></div>
+	<div class="inner-cell" id="box4-2"></div>
+	<div class="inner-cell" id="box4-3"></div>
+	<div class="inner-cell" id="box4-4"></div>
+</div>
+<div class="can-layer" id="box_5" onclick="fill_box(5)">
+	<div class="inner-cell fa fa-check-circle-o" id="box5-first"></div>
+	<div class="inner-cell" id="box5-1"></div>
+	<div class="inner-cell" id="box5-2"></div>
+	<div class="inner-cell" id="box5-3"></div>
+	<div class="inner-cell" id="box5-4"></div>
+</div>
+<div class="can-layer" id="box_6" onclick="fill_box(6)">
+	<div class="inner-cell fa fa-check-circle-o" id="box6-first"></div>
+	<div class="inner-cell" id="box6-1"></div>
+	<div class="inner-cell" id="box6-2"></div>
+	<div class="inner-cell" id="box6-3"></div>
+	<div class="inner-cell" id="box6-4"></div>
+</div>
+</div>
+<div class="row3">
+<div class="can-layer" id="box_7" onclick="fill_box(7)">
+	<div class="inner-cell fa fa-check-circle-o" id="box7-first"></div>
+	<div class="inner-cell" id="box7-1"></div>
+	<div class="inner-cell" id="box7-2"></div>
+	<div class="inner-cell" id="box7-3"></div>
+	<div class="inner-cell" id="box7-4"></div>
+</div>
+<div class="can-layer" id="box_8" onclick="fill_box(8)">
+	<div class="inner-cell fa fa-check-circle-o" id="box8-first"></div>
+	<div class="inner-cell" id="box8-1"></div>
+	<div class="inner-cell" id="box8-2"></div>
+	<div class="inner-cell" id="box8-3"></div>
+	<div class="inner-cell" id="box8-4"></div>
+</div>
+ <div class="can-layer" id="box_9" onclick="fill_box(9)">
+	<div class="inner-cell fa fa-check-circle-o" id="box9-first"></div>
+	<div class="inner-cell" id="box9-1"></div>
+	<div class="inner-cell" id="box9-2"></div>
+	<div class="inner-cell" id="box9-3"></div>
+	<div class="inner-cell" id="box9-4"></div>
+</div>
+</div>
+</section>
+</center>
+<script type="text/javascript">
+	dis_msg_box('#000','lime',"Let's Start !");
+	function dis_msg_box(color,bgcolor,content){
+		$('#dis_msg_box').fadeIn(500);
+		$('#dis_msg_box').css('background-color',bgcolor);
+		$('#dis_msg_box').css('color',color);
+		$('#msg_content_to_display').text(content);
+		setTimeout(function(){
+		$('#dis_msg_box').fadeOut(500);	
+		},2000);
+	}
+	//row 1
+	var box1={'cell1':'cyan','cell2':'red','cell3':'green','cell4':'red'};
+	var box2={'cell1':'lime','cell2':'white','cell3':'green','cell4':'blue'};
+	var box3={'cell1':'blue','cell2':'purple','cell3':'blue','cell4':'orange'};
+
+	//row 2
+
+	var box4={'cell1':'orange','cell2':'red','cell3':'blue','cell4':'lime'};
+	var box5={'cell1':'purple','cell2':'green','cell3':'blue','cell4':'purple'};
+	var box6={'cell1':'purple','cell2':'red','cell3':'white','cell4':'cyan'};
+	
+	//row3 
+
+	var box7={'cell1':'cyan','cell2':'orange','cell3':'lime','cell4':'green'};
+	var box8={'cell1':'orange','cell2':'cyan','cell3':'purple','cell4':'white'};
+	var box9={'cell1':'blue','cell2':'lime','cell3':'white','cell4':'black'};
+
+	
+	//row1 arr
+	var active_cell_box1=[0,1,1,1,1];
+	var active_cell_box2=[0,1,1,1,1];
+	var active_cell_box3=[0,0,1,1,1];
+	
+	//row2 arr
+
+	var active_cell_box4=[0,1,1,1,1];
+	var active_cell_box5=[0,1,1,1,1];
+	var active_cell_box6=[0,0,1,1,1];
+
+	//row3 arr
+
+	var active_cell_box7=[0,1,1,1,1];
+	var active_cell_box8=[0,1,1,1,1];
+	var active_cell_box9=[0,0,1,1,1];
+
+	var filled_box=0;
+	var moves=0;
+
+	var total_box=9;
+	init();
+	function init(){
+		for(loop=1;loop<=total_box;loop++){
+			for(i=1;i<=4;i++){
+				if(eval('active_cell_box'+loop+'['+i+']!=0')){
+					$('#box_'+loop+' #box'+loop+'-'+i).css('background-color',eval('box'+loop+'.cell'+i));
+				}
+				else{
+					$('#box_'+loop+' #box'+loop+'-'+i).css('background-color','transparent');
+				}
+//				alert('active_box'+loop+'['+i+']!=0')
+			}
+		}	
+	}
+
+var temp_box_name;
+var temp_box_cell;
+var temp_box_color;
+var select_box=0;
+var box_address_1='';
+var box_address_2=''
+var range1,range2;
+//var temp_value;
+function fill_box(x){	
+	if(select_box%2==0){
+	temp_box_name="box_"+x;
+	//$('#box_'+x).css('border','4px dotted lime');
+	$('#box_'+x).addClass('active');
+	range1=x;
+	box_address_1=temp_box_name;
+	temp_box_cell=check_active_cells(x)
+	var temp='cell'+get_color(temp_box_cell);
+	temp_box_color=eval('box'+x+'.'+temp);
+	}
+	else{
+	//$('#box_'+range1).css('border','4px solid transparent');
+	$('#box_'+range1).removeClass('active');
+		temp_box_name="box_"+x;
+		range2=x;
+		box_address_2=temp_box_name;
+		if(box_address_1==box_address_2){
+			//console.log('Sry box address are same !.');
+		}
+		else{
+			if(check_active_cells(range2) == 4){
+				/*FIND THE FILLED BOX*/
+				if_box_full(range2);
+			}
+			else if(check_active_cells(range1)==1){
+			// CELL COLOR NOT MOVE IF IT IS LAST COLOR	
+			}		
+			else{
+				swap_color(temp_box_cell,temp_box_color,range1,range2);
+			}	
+		}
+	}
+	select_box++;
+
+}
+
+var color1;
+var temp1,temp2;
+function swap_color(temp_box_cell,temp_box_color,range1,range2){
+if(eval('active_cell_box'+range2+'[0]') == 1){
+// console.log('LOCKED BOX')
+}	
+	else{
+		//CHANGE BOX 2 COLOR
+		$('#box_'+range2+' #box'+range2+'-'+find_next(check_active_cells(range2))).css('background-color',temp_box_color);
+		color1=eval('box'+range1+'.cell'+get_color(check_active_cells(range1)));
+		//REMOVE CELL COLOR
+		temp1=('box'+range1+'[\'cell'+get_color(check_active_cells(range1))+'\']=\'transparent\'');
+		//ADD CELL COLOR	
+		temp2=('box'+range2+'[\'cell'+find_next(check_active_cells(range2))+'\']=\''+color1+'\'');
+		eval(temp1);
+		eval(temp2);
+		//CHANGE BOX 1 COLOR
+		$('#box'+range1+'-'+get_color(check_active_cells(range1))).css('background-color','transparent')
+		//ACTIVATE CELL 1
+		eval('active_cell_box'+range2+'['+find_next(check_active_cells(range2))+']=1');
+		//DEACTIVATE CELL 2	 
+		eval('active_cell_box'+range1+'[get_color(check_active_cells('+range1+'))]=0');
+		//CHECK IF THE BOX IS FULL OR NOT
+		moves+=1;
+		$('#moves').text('Move : '+moves);
+		if_box_full(range2)	
+	}
+}
+
+
+var check_full_temp,temp_incr=0;
+function if_box_full(r){
+				// temp_value='active_cell_box'+range2+'[0]';
+				// console.log(temp_value)
+				// console.log(eval(temp_value))
+if(eval('active_cell_box'+r+'[0]') == 1){
+// console.log('LOCKED BOX')
+}
+else{
+	check_full_temp=eval('box'+r+'.cell4');
+	for(i=1;i<=3;i++){
+		if(eval('box'+r+'.cell'+i) == check_full_temp){
+			temp_incr++;
+		}
+	}
+	if(temp_incr==3){
+		// IF THE VALUE IS 3, ALL THE CELLS COLORS ARE EQUAL
+		$('#box'+r+'-first').css('color',eval('box'+r+'.cell4'));
+		dis_msg_box('#ddd','rgba(250,0,0,.9)',check_full_temp.toUpperCase()+' Colour Full');
+		temp_incr=0;
+		filled_box++;
+		$('#filled_box').text('Filled : '+filled_box);
+		//DEACTIVATE BOX
+		eval('active_cell_box'+r+'[0]=1');
+	}
+	else{
+	temp_incr=0;
+	}
+}
+
+}
+
+/* GET THE COLOR VALUE BY USING OBJ REVERSE METHOD */
+function get_color(x){
+	if(x==4){
+		return 1;
+	}
+	else if(x==3){
+		return 2;
+	}
+	else if(x==2){
+		return 3;
+	}
+	else if(x==1){
+		return 4;
+	}
+}
+
+/* GET THE ACTIVE BOXS AND FIND THE NEXT CELL TO FILL THE COLOR */
+//console.log(find_next(4));
+function find_next(x){
+	if(x==4){
+		return 0;
+	}
+	else if(x==0){
+		return 4;
+	}
+	else if(x==3){
+		return 1;
+	}
+	else if(x==2){
+		return 2;
+	}
+	else if(x==1){
+		return 3;
+	}
+}
+
+
+
+
+//console.log(check_active_cells(1));
+function check_active_cells(c){
+	var active=0;
+	var temp_content="active_cell_box"+c;
+	for(i=0;i<=4;i++){
+		if(eval("active_cell_box"+c+"["+i+"]")!=0){
+			active++;
+		}
+	}
+	return active;
+}
+
+</script>
+</body>
+
+</html>

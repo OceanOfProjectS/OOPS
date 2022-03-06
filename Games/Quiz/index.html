@@ -1,0 +1,329 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+<title>QUIZ-ABBREVIATION</title>
+<link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Iceberg&family=Monoton&family=Nosifer&display=swap" rel="stylesheet">
+<!-- <link href="quizDesign.css" rel="stylesheet"> -->
+<style type="text/css">
+*{
+	margin:0px;
+	padding:0px;	
+	transition:.3s;
+	cursor:pointer;
+	user-select:none;
+}
+body{
+	background:linear-gradient(45deg,#777,#555 20%,black);
+	background-repeat:no-repeat;
+	background-size:cover;  
+	font-family: 'Iceberg', cursive;
+	}
+
+header,.disLvl_layer,footer,section{
+	height:10vh;
+	width: 100%;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}	
+footer{
+	justify-content: space-around;
+}
+section{
+	height:70vh;
+	flex-direction: column;
+}
+
+
+#Qtitle{
+	font-size:30pt; ;
+	color:#ddd;
+}
+.disLvl_layer,#disLockAns{
+	font-size:10pt ;
+	color:#ddd;
+}
+#disQ{
+	font-size:20pt;
+	color: #ddd;
+}
+.highlight{
+	color: red;
+	padding:0px 5px;
+	font-weight: bolder;
+}
+#disOptions div input{
+	height:100%;
+	background: red;
+}
+#disOptions div{
+	padding:10px 30px;
+//	padding-bottom:10px;
+	margin-top:20px;
+	background: rgba(0, 0, 0, .2);
+	color:rgba(256,256,256,.2) ;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 10pt;
+border-radius: 5px;
+line-height: 100%;
+}
+footer input{
+	padding:5px 20px;
+	border: none;
+	outline: none;
+	background: linear-gradient(to top,rgba(0,0,0,.2),rgba(0,0,0,.2));
+	color: rgba(256,256,256, .1);
+	border-radius: 5px;
+}
+
+@media only screen and (max-width: 350px){
+	#Qtitle{
+		font-size:15pt;
+	}
+	#disLvl,#disTime{
+		font-size:7pt;
+	}
+	#disQ{
+		font-size: 11pt;
+	}
+#disOptions div{
+	margin:10px 0px;
+	padding:10px ;
+	width:85vw;
+	//padding:10px;
+	font-size: 8pt;
+}
+
+}
+
+
+</style>
+</head>
+<body>
+<header>
+<span id="Qtitle">Quiz</span>
+</header>
+<div class="disLvl_layer"><div id="disLvl"></div></div>
+<section>
+	<div id="disQuestionLayer"><span id="disQ"></span></div>
+		<div id="disOptions">
+				<div id="A" title="1" onclick="lockAns(event)"></div>
+				<div id="B" title="2" onclick="lockAns(event)"></div>
+				<div id="C" title="3" onclick="lockAns(event)"></div>
+				<div id="D" title="4" onclick="lockAns(event)"></div>
+		</div>
+</section>
+<footer>
+<h3 id="disLockAns" style="color:#fff;"></h3>
+<input type="button" value="next" disabled="true" id="nextBttn" onclick='correctionSection()'>
+</footer>
+<script type="text/javascript">
+var q=[
+
+[" What is the full form of <span class='highlight'>ATM</span>","Automated Tallying Machine","Automatic Teller Machine","Automated Totalling Machine ","Automated Transaction of Money","2"],	
+[" What is the full form of <span class='highlight'>AIDS</span>","Acquired Immune Deficiency Syndrome","Acquired Immunity Deficiency Syndrome","Acquired Immune Decency Syndrome","Acquired Immune Defense Syndrome","1"],
+
+[" What is the full form of <span class='highlight'>BRIC</span>","Bangladesh, Romania, Indonesia and Cambodia","Botswana, Rwanda, Ivory Coast and Croatia","Bangladesh, Romania, India and Cambodia","Brazil, Russia, India and China","4"],
+[" What is the full form of <span class='highlight'>EVM</span>","Electronic Voting Machines","Electronic Voters Machines","Electrical Voting Machines","Electronic Vote Machines","1"],
+
+[" What is the full form of <span class='highlight'>IRBM</span>","Intermediate Resource Ballistic Missile","Intermediate Range Ballistic Missile","Intermediate Range of Ballistic Missile","Intermediated Range Ballistic Missile","2"],
+[" What is the full form of <span class='highlight'>PSLV</span>","Polarised Source Laser Viewing","Polar Survey Landing Vehicle","Polar Satellite Launch Vehicle","Precise Source Locating Vision","3"],
+
+[" What is the full form of <span class='highlight'>ISRO</span>","Indian Satellite Research Organisation","Indian Solar Research Organisation","Indian Site Research Organisation","Indian Space Research Organisation","4"],
+[" What is the full form of <span class='highlight'>NAEP</span>","National Adult Education Programme","Nuclear and Atomic Energy Project","National Atomic Energy Planning"," National Authority on Engineering Projects","1"],
+
+ [" What is the full form of <span class='highlight'>DRDO</span>","Defence Region and Development Organisation","Defence Research and Development Organisation","Defence Reruitment and Development Organisation","Defence Research and Developed Organisation","2"],
+ [" What is the full form of <span class='highlight'>PPP</span>","Public Private Partnership","Purchase Produce Provide","Purchasing Power Parity","People's Programme & Priority","1"],
+
+ /* 10-Q-OVER */
+
+[" What is the full form of <span class='highlight'>PIN</span>","Postal Indent Number","Postal Index Number","Past Index Number","Postman Index Number","2"],
+[" What is the full form of <span class='highlight'>PWD</span>","Person Works Department","People Works Department","Private Works Department","Public Works Department","4"],
+
+[" What is the full form of <span class='highlight'>R&D</span>","Research and Development","Research and Developed","Research advane Development ",". Recruit and Development","1"],
+[" What is the full form of <span class='highlight'>RADAR</span>","Radio Device and Ranging","Region Device and Ranging","Radio Detecting and Ranging ","Radio Detect and Rangs","3"],
+
+[" What is the full form of <span class='highlight'>RAM</span>","Read Access Memory","Random Access Memory","Random Access Machine","Range Access Machine","2"],
+[" What is the full form of <span class='highlight'>RAW</span>","Research & Analysis Wing ","Research & Analytical Wing","Radio & Analysis Wing ","Raw & Analysis Wing","1"],
+
+[" What is the full form of <span class='highlight'>RBI</span>","Reserve Bank of Import","Regional Bag of India","Reserve Book of India ","Reserve Bank of India","4"],
+["What is the full form of <span class='highlight'>RDX</span>","Recruitment Department Employee","Research Department Explosive","Rearrange Department Engineer","Research Department Employee","2"],
+
+[" What is the full form of <span class='highlight'>RNA</span>","Ribonucleic acid ","Rabbies acid","Ribbon acid","Raw authority","1"],
+[" What is the full form of <span class='highlight'>AAA</span>","American Automobile Association","Anti-Aircraft Artillery","Authentication, Authorization and Accounting","All of the above","4"],
+
+/* 20-Q-OVER */
+[" What is the full form of <span class='highlight'>B2B</span>","Brain To Business","Business To Business","Business To Broad","Business To Best","2"],
+[" What is the full form of <span class='highlight'>NDSAP</span>","Native Scheme for Deposit Policy","National Deposit and Surcharge Profit","National Data Sharing and Active Policy","National Data Sharing and AccessibilityPolicy","4"],
+
+[" What is the full form of <span class='highlight'>SCB</span>","State Cooperative Bank","Simple Cash Binding","SMB Cooperative Bank","Scheduled Commercial Bank","1"],
+[" What is the full form of <span class='highlight'>AMEX</span>","Annual Marketing Exchange","American Stock Exchange","American Exchange","American Express","4"],
+
+[" What is the full form of <span class='highlight'>HSBC</span>","Havells and Business Corporation","Hewlett and B'ackards Corporation","Housing and Share Broking Commission","Hongkong and Shanghai Bank Corporation","4"],
+[" What is the full form of <span class='highlight'>ICICI</span>","Industrial Credit and Investment Corporation of India","Investment Corporation of Induatrial Credit for India","Investor Corporation for Insurance Commission of India","Industrial Convention and Investment Corporation of India","1"],
+
+[" What is the full form of <span class='highlight'>IIBI</span>","Indian Insurance Board of India ","Industrial Investment Board of India","Industrial Investment Bank of India","Insurance and Investment Board of India","3"],
+[" What is the full form of <span class='highlight'>BoP</span>","Bill of Process","Balance Of Power","Balance of Payments","Business Owner's Policy","3"],
+
+[" What is the full form of <span class='highlight'>IBA</span>","Indian Bank Association ","Insurance Administrative Board","International Bank for America","Individual Business Administration","1"],
+[" What is the full form of <span class='highlight'>CBS</span>","Central Banking Sector","Credit Basis on Service","Coversion of Banking solicitate",". Consolidated Banking Statistics","4"],
+
+/* 30 OVER */
+
+[" What is the full form of <span class='highlight'>EXIM</span> Bank","External Investment Mode ","Export Import Bank of India","Exclusive Monthly Installment","Extra Premium Insurance Made","2"],
+[" What is the full form of <span class='highlight'>CDBS</span>","Central Data Base System","Consolidated Database System","Consolidated Data Base Search","Committee of Direction on Banking Statistics","4"],
+
+[" What is the full form of <span class='highlight'>DRT</span>","Debt Recovery Tribunals","Divided and Revised Trading","Deposit for Returning Traders","Devolopment and Rapid Transition","1"],
+[" What is the full form of <span class='highlight'>UBB</span>","United Bureau of Banking","Uniform Balance Book","Unified Banking Business","Undivided Broking Balance","2"],
+
+[" What is the full form of <span class='highlight'>WPI</span>","Without Providing Interest","Wholesale Price Index","With Providing Interest","World Provident Inc","2"],
+[" What is the full form of <span class='highlight'>CBS</span>","Core Banking Solution","Central Banking Solution","Central Bureau of Statistics","Central Bureau for Statistic","1"],
+
+[" What is the full form of <span class='highlight'>UCB</span>","Urban Cooperative Bank","United Corporation Bank","Union Cooperative Bank","Unique Conveying Basis Points","1"],
+[" What is the full form of <span class='highlight'>ECB</span>","Eternal Carry over Banking","Extended Commodity Business","External Commercial Borrowing","Exclusive Commission for Barrowing","3"],
+
+[" What is the full form of <span class='highlight'>ATA</span>","Active Terminal Access","Array of Transfer Access","Automated Teller Architecture","Advanced Technology Attachment","4"],
+[" What is the full form of <span class='highlight'>ANSI</span>","Asian National Society of Investment","American National Standards Institute","American National Surveillance Institute ","American National Standardised Institute","2"],
+
+/*40 OVER */
+
+[" What is the full form of <span class='highlight'>AC</span>","Alternate Current","Altimeter Change","Access Credentials"," Auditor Credit","1"],
+[" What is the full form of <span class='highlight'>AI</span>","All Indian","Artifical Intelligence","Accurate Information","Aeronautical Information","2"],
+
+[" What is the full form of <span class='highlight'>AIDS</span>","Asian Institute of Defense Sector","Assesment on Insurance Deficit System","Artifical Intelligence Development System ","Acquired Immuno Deficiency Syndrome","4"],
+["What is the full form of <span class='highlight'>AICTE</span>","All India Council for Technical Education","Asian Institute for Computer Technology","American Institute for Clinical Technology","Active Investment on Commodity and Trading Entity","1"],
+
+["What is the full form of <span class='highlight'>ASCII</span>","Alternate Subsystem for Credit in India","Active Server Code for Intelligent Information","Asian Standard Code for Information Interchange","American Standard Code for Information Interchange","4"],
+["What is the full form of <span class='highlight'>VASP</span>","Value At Stake Policy ","Value Added Service Plan","Value Added System Policy","Value Added Service Provider","4"],
+
+["What is the full form of <span class='highlight'>UUS</span>","Uu Stratum ","Universal Unit System","Universal Sending Unit","Ultimate Uploader System","1"],
+[" What is the full form of <span class='highlight'>A&A</span>","Array of Amphere","American Appliances","Architecture Association","Astronomy And Astrophysics","4"],
+
+["What is the full form of <span class='highlight'>AIAA</span>","Artificial Intelligence Aided Architecture","American Institute Of Aeronautics And Astronautics","International Assigned Auditing and Archiving","Associated Information on Asset Assignment","2"],
+["What is the full form of <span class='highlight'>APM</span>","Annual Progress Meet ","Atmospheric Particle Monitor","Active Project Management ",". Asset in Procurement Market","2"]
+
+/* 50 OVER */
+];
+
+var qRange=0;	
+var crrt=0,wrg=0;
+var x=document.getElementById('disQ');
+var a=document.getElementById('A');
+var b=document.getElementById('B');
+var c=document.getElementById('C');
+var d=document.getElementById('D');
+function correctionSection(){
+var i;
+for(i=1;i<=4;i++){
+var t=document.getElementById('c'+i);
+	if(t.checked==true){
+		if(i==eval("q["+qRange+"][5]")){
+		//alert("ANS "+i+" is correct");
+		crrt=crrt+1;
+		}
+		else{wrg=wrg+1;
+		}
+		x.innerHTML="";
+		qRange=qRange+1;
+		questionDisplay();
+	}
+}
+document.getElementById('disLockAns').innerHTML="";
+// var t1=document.getElementById("nextBttn");
+// t1.disabled=true;
+// t1.style.background="linear-gradient(to top,#555,#555)";
+// t1.style.color="#fff";
+colorChange();
+}
+function questionDisplay(){
+if(qRange==q.length){
+alert("TOTAL Questions : "+q.length+"\n\n\nCorrect : "+crrt+"\n\nWrong : "+wrg+"\n\n\n- - - - Thank You - - - -")
+runTime();
+location.reload();
+}
+document.getElementById('disLvl').innerHTML="Questions&nbsp;-&nbsp;("+(qRange+1)+"/"+q.length+")&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Time&nbsp;-&nbsp;<span id='disTime'></span>";
+x.innerHTML=eval("q["+qRange+"][0]");
+a.innerHTML="<br><input type='radio' name='choices' id='c1'>"+eval("q["+qRange+"][1]");
+b.innerHTML="<br><input type='radio' name='choices' id='c2'>"+eval("q["+qRange+"][2]");
+c.innerHTML="<br><input type='radio' name='choices' id='c3'>"+eval("q["+qRange+"][3]");
+d.innerHTML="<br><input type='radio' name='choices' id='c4'>"+eval("q["+qRange+"][4]");
+}
+questionDisplay();
+
+var h=0,m=0,s=0,t,time=8;
+var finish=null;
+runTime();
+finish=false;
+function runTime(){
+	if(finish){
+		clearTimeout(t);
+		time=h+":"+m+":"+s;
+	}
+	else{
+		s=s+1;
+		if(s==60){
+			m=m+1;s=0;
+		}
+		if(m==60){
+			h=h+1;m=0;s=0;
+		}
+		if(h==12){
+			h=0;m=0;s=0;
+		}
+		document.getElementById('disTime').innerHTML=h+":"+m+":"+s;		
+		t=setTimeout(runTime,1000);
+	}
+//		t=setTimeout(runTime,1000);
+}
+
+
+
+
+
+
+
+
+function colorChange(){
+		for(var i=1;i<=4;i++){
+		if(i==1){
+			document.getElementById("A").style.backgroundColor="rgba(0,0,0,.2)";
+			document.getElementById("A").style.color="rgba(256,256,256,.2)";
+			document.getElementById("A").style.boxShadow="0px 0px 0px 0px transparent";
+		}
+		if(i==2){
+			document.getElementById("B").style.backgroundColor="rgba(0,0,0,.2)";
+			document.getElementById("B").style.color="rgba(256,256,256,.2)";
+			document.getElementById("B").style.boxShadow="0px 0px 0px 0px transparent";
+			}
+		if(i==3){
+			document.getElementById("C").style.backgroundColor="rgba(0,0,0,.2)";
+			document.getElementById("C").style.color="rgba(256,256,256,.2)";
+			document.getElementById("C").style.boxShadow="0px 0px 0px 0px transparent";
+			}
+		if(i==4){
+			document.getElementById("D").style.backgroundColor="rgba(0,0,0,.2)";
+			document.getElementById("D").style.color="rgba(256,256,256,.2)";
+			document.getElementById("D").style.boxShadow="0px 0px 0px 0px transparent";
+		}		
+	}
+}
+
+
+function lockAns(e){
+	colorChange();
+	document.getElementById('c'+e.target.title).checked=true;
+	document.getElementById('disLockAns').innerHTML="&#10148;&nbsp;&nbsp;Ans <span style='color:lime;'>"+e.target.id+"</span> is locked";
+	var t1=document.getElementById(e.target.id);
+	t1.style.backgroundColor="lime";
+	t1.style.color="#000";	
+	t1.style.boxShadow="0px 0px 1px 0px lime inset,0px 0px 10px 0px lime inset";
+	document.getElementById("nextBttn").disabled=false;
+	document.getElementById("nextBttn").style.background="linear-gradient(to top,blue,cyan)";
+	document.getElementById("nextBttn").style.color="#000";
+}
+
+</script>
+</body>
+</html>

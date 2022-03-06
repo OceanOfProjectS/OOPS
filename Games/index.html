@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mini Games</title>
+		<meta name="viewport" content="width=device-width,initial-scale:0.1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="text/css" href="../images/logo.png">
+	<style type="text/css">
+		*{
+			padding:0px;
+			margin:0px;
+		}
+		header{
+			height:15vh ;
+			width: 100%;
+			background:#124;
+			display:flex;
+			justify-content:space-between;
+			align-items:center;
+			padding:0px 10px;
+			color: #ddd;
+			box-sizing: border-box;
+		}
+		section{
+			height:85vh ;
+			width: 100%;
+			background: #123;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			overflow: scroll;
+		}
+		section div{
+			background: #ddd;
+			height:150px;
+			width:150px ;
+			padding:10px;
+			margin:5px 10px;
+			border-radius: 5px;
+			display: flex;
+			justify-content:space-around;
+			align-items: center;
+			flex-direction: column;
+		}
+		section h3{
+			color:#333;
+		}
+		section p{
+			color: grey;
+		}
+		section button{
+			outline: none;
+			border: none;
+			width:100%;
+			padding:5px;
+			cursor: pointer;
+			background:rgba(0, 0, 0, .2) ;
+		}
+		section button:hover{
+			cursor: pointer;
+			background:rgba(256, 200, 0, .8) ;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+<header><h5>Mini Games</h5><h5 class="fa fa-close" onclick="window.close()"></h5></header>
+<section>
+	<div>
+		<h3>Colour Fill</h3>
+		<br>
+		<p>Fill the colour</p>
+		<br>
+		<button onclick="window.open('colour_fill/','blank')">Open</button>
+	</div>
+	<div>
+		<h3>Sudoku</h3>
+		<br>
+		<p>9 by 9 Sudoku Game.</p>
+		<br>
+		<button onclick="window.open('sudoku/','blank')">Open</button>
+	</div>
+
+	<div>
+		<h3>Memory Power</h3>
+		<br>
+		<p>Find the pair.</p>
+		<br>
+		<button onclick="window.open('matching_puzzle/','blank')">Open</button>
+	</div>
+
+	<div>
+		<h3>Number Puzzle</h3>
+		<br>
+		<p>Order to ascending.</p>
+		<br>
+		<button onclick="window.open('numberPuzzle/','blank')">Open</button>
+	</div>
+
+	<div>
+		<h3>X or O</h3>
+		<br>
+		<p>X or O , Play with friends.</p>
+		<br>
+		<button onclick="window.open('x_or_o/','blank')">Open</button>
+	</div>
+
+	<div>
+		<h3>Colour Puzzle</h3>
+		<br>
+		<p>Improve your brain speed.</p>
+		<br>
+		<button onclick="window.open('colourPuzzle/','blank')">Open</button>
+	</div>
+
+	<div>
+		<h3>Quiz</h3>
+		<br>
+		<p>Abbrevation type.</p>
+		<br>
+		<button onclick="window.open('Quiz/','blank')">Open</button>
+	</div>
+
+</section>
+</body>
+</html>

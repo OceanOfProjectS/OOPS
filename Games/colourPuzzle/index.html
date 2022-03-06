@@ -1,0 +1,162 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Colour Puzzle</title>
+</head>
+<body>
+<style>
+	*{
+		margin:0px;
+		padding: 0px; 
+	}
+	body{
+		background-color:#123; 
+	}
+	header{
+		height:10vh; 
+		display:flex;
+		justify-content: center;
+		align-items: center; 
+	}
+	section{
+		height: 80vh;
+	}
+	footer{
+		height:10vh;
+	}
+#disTime,#Points{
+	color: #ddd;
+}
+	#con{
+		height:100%; width:100%; 
+	}
+	h1{
+		color: transparent;
+		background:linear-gradient(to right,red,blue,yellow,green,orange,#000,cyan,violet,grey); 
+		-webkit-text-stroke:.2px #fff;
+		-webkit-background-clip:text;
+		animation:c 5s linear infinite; 
+	}
+	@keyframes c{
+		0%{
+			background-position:0px; 
+		}
+		100%{
+			background-position:150px;  
+		}
+	}
+	input[type="text"]{
+		border:none;
+		outline: none;
+		background-color:transparent; 
+		text-align:center;
+		font:25pt agency fb;
+		font-weight:bolder;
+		margin:0px 0px; 
+		height:50px;width:150px; 
+		text-shadow:2px 2px 2px #000 
+	}
+.colours{		display:flex; 
+		justify-content:space-around;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+		.colours div{
+			padding:50px;
+		border:1px solid #666;
+		margin:10px 15px;
+		border-radius:10px; 
+		}
+		.colours div:hover{
+			cursor: pointer;
+		box-shadow:0px 0px 10px 0px #333;
+	}
+	@media only screen and (max-width:530px){
+		.colours div{
+			padding:35px;
+		}
+	}
+	@media only screen and (max-width:450px){
+		.colours div{
+			padding:30px;
+		}
+	}
+	@media only screen and (max-width:310px){
+		header h1{
+			font-size:13pt; ;
+		}
+		#t,#disTime,#Points{
+			font-size: 11pt;
+		}
+		.colours div{
+			padding:20px;
+		}
+	}
+
+
+
+</style>
+	<header><h1>COLOUR PUZZLE</h1></header>
+	<section>
+			<div id="con">
+				<div id="topSec" style="width:100%;display: flex;justify-content: space-around;align-items: center; ">
+			<b><span id="Points"></span></b>
+			<input type="text" name="t" readonly="true" id="t" value="sas">					
+		<b><span id="disTime">Time : 60</span></b>
+
+				</div>
+	<div class="colours">
+		<div id="redC" onclick="mainF('red')" style="background-color:red;"></div>
+		<div id="blueC" onclick="mainF('blue')" style="background-color:blue;"></div>
+		<div id="pinkC" onclick="mainF('pink')" style="background-color:pink;"></div>
+		<div id="greenC" onclick="mainF('green')" style="background-color:green;"></div>
+		<div id="blackC" onclick="mainF('black')" style="background-color:black;"></div>
+		<div id="brownC" onclick="mainF('brown')" style="background-color:brown;"></div>
+		<div id="yellowC" onclick="mainF('yellow')" style="background-color:yellow;"></div>
+		<div id="limeC" onclick="mainF('lime')" style="background-color:lime;"></div>
+		<div id="orangeC" onclick="mainF('orange')" style="background-color:orange;"></div>
+		<div id="purpleC" onclick="mainF('purple')" style="background-color:purple;"></div>
+		<div id="greyC" onclick="mainF('grey')" style="background-color:grey;"></div>
+		<div id="whiteC" onclick="mainF('white')" style="background-color:white;"></div>
+</div>
+	</section>
+	<footer></footer>
+<script>
+	 var colorIndex=['red','blue','pink','green','black','brown','yellow','lime','orange','purple','grey','white'];
+	 var rnd,foreGroundRnd,crrtSelectScore=0,wrongSelectScore=0,totalSec=60;
+	 var con1=document.getElementById('con');
+	mainF();
+	function mainF(c,x){
+		if(totalSec>0){
+			if(t.value==c){
+				crrtSelectScore=crrtSelectScore+1;
+			}
+			else{
+				wrongSelectScore=wrongSelectScore+1;
+			}
+document.getElementById('Points').innerHTML="Points : "+crrtSelectScore+"/"+(wrongSelectScore-1);
+
+		}
+			// if(totalSec==0){totalSec=0;
+			// 	alert("GAME OVER\n\nCorrect Selection : "+crrtSelectScore+"\n\nWrong Selection : "+(wrongSelectScore-1)+"\n\nTotal : "+(crrtSelectScore-(wrongSelectScore-1)));
+			// 	navigator.reload();
+			// }
+	rnd=Math.floor(Math.random()*11);
+	foreGroundRnd=Math.floor(Math.random()*11);		
+	 document.getElementById('t').style.color=colorIndex[foreGroundRnd];
+	 t.value=colorIndex[rnd];
+	}
+	function timeF(){
+		totalSec=totalSec-1;
+		if(totalSec<=0){
+			clearInterval(timeLoop);}
+		document.getElementById('disTime').innerHTML="Time : "+totalSec;
+		if(totalSec==0){totalSec=0;
+				alert("GAME OVER\n\nCorrect Selection : "+crrtSelectScore+"\n\nWrong Selection : "+(wrongSelectScore-1)+"\n\nTotal : "+(crrtSelectScore-(wrongSelectScore-1)));
+				location.reload();
+			}
+	}
+	var timeLoop=setInterval(timeF,1000);
+</script>
+</body>
+</html>

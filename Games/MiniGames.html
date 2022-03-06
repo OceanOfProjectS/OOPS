@@ -1,0 +1,2750 @@
+<html><title>MiniGames</title><style>body{background-color:#ccc;}#diswinner{color:red;font-size: 10pt;font-family: sans-serif;}
+#container{height:520px;width:470px;background-color:black;margin-top:20px;color:white;font-family:sans-serif;font-size:30pt;border-radius:40px;}
+#container2{height:440px;width:400px;background-color:black;margin-top:20px;color:white;font-family: sans-serif;font-size: 30pt;border-radius: 40px;}
+#container:hover{box-shadow: 10px 10px 20px #000;border:2px solid white;}
+#container2:hover{box-shadow: 10px 10px 20px #000;border:2px solid white;}
+#title:hover{color:black;text-shadow: 2px 2px 40px 10px white;}
+button{font-family:serif;padding:10px;width:180px;font-size:15pt;transition-duration:1s;}
+#close{border-radius: 10px;background-color:red;border:none;}
+#close:hover{
+	width:200px;height:50px;font-size:20pt;background-color:black;color:red;box-shadow: 0px 0px 20px red;cursor: pointer;
+}
+#t,#s,#m,#createdby{border-radius: 10px;background-color:cyan;border:none;}
+#createdby:hover{width:200px;height:50px;font-size:20pt;background-color:black;color:cyan;box-shadow: 0px 0px 20px cyan;cursor: pointer;transition-duration:5px;}
+#t:hover{width:200px;height:50px;font-size:20pt;background-color:black;color:cyan;box-shadow: 0px 0px 20px cyan;cursor: pointer;}
+#home,#home2,#easysudoku,#mediumsudoku,#hardsudoku{border-radius:10px;background-color:cyan;border:none;}
+#mediumsudoku:hover{width:180px;height:50px;font-size:20pt;background-color:black;color:cyan;box-shadow: 0px 0px 20px cyan;cursor: pointer;}
+#hardsudoku:hover{width:180px;height:50px;font-size:20pt;background-color:black;color:cyan;box-shadow: 0px 0px 20px cyan;cursor: pointer;}
+#easysudoku:hover{width:180px;height:50px;font-size:20pt;background-color:black;color:cyan;box-shadow: 0px 0px 20px cyan;cursor: pointer;}
+#sudoku4home,#mediumsudokuhome,#hardsudokuhome{border-radius:10px;background-color:cyan;border:none;height:40px;width:100px;}
+#sudoku4home:hover{width:100px;height:40px;font-size:15pt;background-color:black;color:cyan;box-shadow: 0px 0px 20px cyan;cursor: pointer;}
+#hardsudokuhome:hover{width:100px;height:40px;font-size:15pt;background-color:black;color:cyan;box-shadow: 0px 0px 20px cyan;cursor: pointer;}
+#mediumsudokuhome:hover{width:100px;height:40px;font-size:15pt;background-color:black;color:cyan;box-shadow: 0px 0px 20px cyan;cursor: pointer;}
+#csudokuans,#mediumcsudokuans,#hardcsudokuans{border-radius:10px;background-color:lime;border:none;height:40px;width:100px;}
+#csudokuans:hover{width:100px;height:40px;font-size:15pt;background-color:black;color:lime;box-shadow: 0px 0px 20px lime;cursor: pointer;}
+#mediumcsudokuans:hover{width:100px;height:40px;font-size:15pt;background-color:black;color:lime;box-shadow: 0px 0px 20px lime;cursor: pointer;}
+#hardcsudokuans:hover{width:100px;height:40px;font-size:15pt;background-color:black;color:lime;box-shadow: 0px 0px 20px lime;cursor: pointer;}
+#home:hover{width:180px;height:50px;font-size:20pt;background-color:black;color:cyan;box-shadow: 0px 0px 20px cyan;cursor: pointer;}
+#home2:hover{width:180px;height:50px;font-size:20pt;background-color:black;color:cyan;box-shadow: 0px 0px 20px cyan;cursor: pointer;}
+#s:hover{width:200px;height:50px;font-size:20pt;background-color:black;color:cyan;box-shadow: 0px 0px 20px cyan;cursor: pointer;}
+#m:hover{width:200px;height:50px;font-size:20pt;background-color:black;color:cyan;box-shadow: 0px 0px 20px cyan;cursor: pointer;}
+#playagain{width:200px;border-radius:25px;background-color:yellow;border:none;}
+#playagain:hover{width:200px;height:50px;font-size:20pt;color:yellow;box-shadow: 0px 0px 20px yellow;cursor: pointer; background-color:black;}
+#scorex,#scoreo{border:none;width:120px;border-radius:10px;background-color: black;color:lime;}
+#T_game_place{background-color:#000;height:246px;width:280px;border-radius:5px;}
+#title,#title2{padding:20px;padding-left:0px;padding-top:30px;font-size:20pt;height:5px;width:300px;}
+#place1,#place2,#place3,#place4,#place5,#place6,#place7,#place8,#place9{padding:15px;padding-left: 20px;padding-top: 10px;font-size: 18pt;border:1px solid white;color:#000;
+	border-radius: 10px; cursor: pointer;}
+#myname{font-size:40pt; font-family: Agency FB;width:80%;color:white;border-bottom: 2px solid #ccc;}	
+#r1,#r2,#r3,#r4,#r5,#r6,#r7,#r8,#r8,#r9,#r10,#r11,#r12,#r13,#r14,#r15,#r16,
+#sr1,#sr2,#sr3,#sr4,#sr5,#sr6,#sr7,#sr8,#sr9,#sr10,#sr11,#sr12,#sr13,#sr14,#sr15,#sr16,#sr17,#sr18,#sr19,#sr20,#sr21,#sr22,#sr23,#sr24,#sr25,#sr26,#sr27,#sr28,#sr29,#sr30,#sr31,#sr32,#sr33,#sr34,#sr35,#sr36,
+#nr1,#nr2,#nr3,#nr4,#nr5,#nr6,#nr7,#nr8,#nr9,#nr10,#nr11,#nr12,#nr13,#nr14,#nr15,#nr16,#nr17,#nr18,#nr19,#nr20,#nr21,#nr22,#nr23,#nr24,#nr25,#nr26,#nr27,#nr28,#nr29,#nr30,#nr31,#nr32,#nr33,#nr34,#nr35,#nr36,#nr37,#nr38,#nr39,#nr40,#nr41,#nr42,#nr43,#nr44,#nr45,#nr46,#nr47,#nr48,#nr49,#nr50,#nr51,#nr52,#nr53,#nr54,#nr55,#nr56,#nr57,#nr58,#nr59,#nr60,#nr61,#nr62,#nr63,#nr64,#nr65,#nr66,#nr67,#nr68,#nr69,#nr70,#nr71,#nr72,#nr73,#nr74,#nr75,#nr76,#nr77,#nr78,#nr79,#nr80,#nr81{	height: 40px;width: 40px;color:black;font-size:20pt;text-align: center;border:2px solid blue;}
+
+#time,#time1,#time2{color:white;}#sukoduscore{font-size: 15pt;color:yellow;}
+#sudokuchoice{border-radius:20px;height: 350px;width: 300px;background-color:#000;}
+</style><body><center><br><br><br><br>
+	<!-- intro section -->
+<div id="container">
+<div id="title">Mini Game</div><hr><center>
+<button id="t" onclick="tictac()">Tic Tac</button><br><br>
+<h1 id="myname" hidden="true">Manimaran.KV</h1>
+			<button id="home2" onclick="home2()" hidden="true">Home >></button>
+	<button id="s" onclick="sudoku()">Sudoku</button><br><br>
+	<button id="m" onclick="more()">More</button><br><br>
+<button id="createdby" onclick="createdby()">Created By</button><br><br>
+	<button id="close" onclick="cls()">Close</button>
+</center>
+	</div>
+		<div id="container2" hidden="true">
+	<strong id="title2">Mini Game</strong><p id="diswinner"></p><hr id="line">
+	<!-- Tic Tac game section -->
+<div id="T_game_place" hidden="true">
+		<strong id="place1" onclick="gochplace1()">1</strong>&nbsp&nbsp&nbsp&nbsp
+		<strong id="place2" onclick="gochplace2()">2</strong>&nbsp&nbsp&nbsp&nbsp
+		<strong id="place3" onclick="gochplace3()">3</strong><br><br>
+		<strong id="place4" onclick="gochplace4()">4</strong>&nbsp&nbsp&nbsp&nbsp
+		<strong id="place5" onclick="gochplace5()">5</strong>&nbsp&nbsp&nbsp&nbsp
+		<strong id="place6" onclick="gochplace6()">6</strong><br><br>
+		<strong id="place7" onclick="gochplace7()">7</strong>&nbsp&nbsp&nbsp&nbsp
+		<strong id="place8" onclick="gochplace8()">8</strong>&nbsp&nbsp&nbsp&nbsp
+		<strong id="place9" onclick="gochplace9()">9</strong>
+	</div>
+		<button id="scorex" disabled="true">[X]Score-0</button>
+		<button id="scoreo" disabled="true">[O]Score-0</button><br>
+		<button id="playagain" onclick="playagain()">Play Again</button>
+		<button id="home" onclick="home()">Home >></button>
+	</div>
+<!-- Sudoku game section -->
+<div id="sudokuchoice" hidden="true"><br><br><br><br>
+	<button id="easysudoku" onclick="easysudoku()">Easy</button><br><br>
+		<button id="mediumsudoku" onclick="mediumsudoku()">Medium</button><br><br>
+	<button id="hardsudoku" onclick="hardsudoku()">Hard</button><br><br>
+		<button id="home" onclick="homeee()"><< Home</button>
+</div>
+<div id="fbyfsudoku" hidden="true">
+<table style="background-color:#000;" height="240" width="300">	<tr>
+			<td align="center"><strong id="time">0 : 0</strong><br><br><br>
+<!-- row 1 --><input type="text" name="r1" id="r1" size="1"/>
+<input type="text" name="r2" id="r2" value="3" disabled="true"  size="1"/>
+<input type="text" name="r3" id="r3" size="1"/>
+<input type="text" name="r4" id="r4" size="1"/><br>
+<!-- row 2 --><input type="text" name="r5" id="r5" size="1"/>
+<input type="text" name="r6" id="r6" size="1"/>
+<input type="text" name="r7" id="r7" value="3" disabled="true" size="1"/>
+<input type="text" name="r8" id="r8" size="1"/><br>
+<!-- row 3	 --><input type="text" name="r9" id="r9" size="1"/>
+<input type="text" name="r10" id="r10" size="1"/>
+<input type="text" name="r11" id="r11" value="1" disabled="true" size="1"/>
+<input type="text" name="r12" id="r12" size="1" height="100"/><br>
+<!-- row 4 --><input type="text" name="r13" id="r13" value="3" disabled="true" size="1"/>
+<input type="text" name="r14" id="r14" size="1"/>
+<input type="text" name="r15" id="r15" size="1"/>
+<input type="text" name="r16" id="r16" size="1" value="4" disabled="true"/><br><br>
+<button id="sudoku4home" onclick="sudoku4home()">< Home </button>
+<button id="csudokuans" onclick="csudokuans()"> Check </button>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<div id="sbyssudoku" hidden="true">
+	<table style="background-color:#000;" height="240" width="300">
+		<tr>
+			<td align="center"><strong id="time1">0 : 0</strong><br><br>
+<!-- row 1 --><input type="text" name="sr1" id="sr1" size="1"/>
+<input type="text" name="sr2" id="sr2" value="4" disabled="true"  size="1"/>
+<input type="text" name="sr3" id="sr3" size="1"/>
+<input type="text" name="sr4" id="sr4" size="1"/>
+<input type="text" name="sr5" id="sr5" value="2" disabled="true" size="1"/>
+<input type="text" name="sr6" id="sr6" size="1" /><br>
+
+<!-- row 2 --><input type="text" name="sr7" id="sr7" size="1"/>
+<input type="text" name="sr8" id="sr8" size="1"/>
+<input type="text" name="sr9" id="sr9" value="3" disabled="true" size="1"/>
+<input type="text" name="sr10" id="sr10" value="1" disabled="true" size="1" />
+<input type="text" name="sr11" id="sr11" size="1"/>
+<input type="text" name="sr12" id="sr12" size="1"/><br>
+
+<!-- row 3 --><input type="text" name="sr13" id="sr13" value="6" disabled="true" size="1" />
+<input type="text" name="sr14" id="sr14" size="1" height="100"/>
+<input type="text" name="sr15" id="sr15" value="2" disabled="true" size="1"/>
+<input type="text" name="sr16" id="sr16" size="1"/>
+<input type="text" name="sr17" id="sr17" size="1"/>
+<input type="text" name="sr18" id="sr18" value="4" disabled="true" size="1"/><br>
+
+<!-- row 4 --><input type="text" name="sr19" id="sr19" size="1"/>
+<input type="text" name="sr20" id="sr20" value="3" disabled="true"  size="1"/>
+<input type="text" name="sr21" id="sr21" size="1"  />
+<input type="text" name="sr22" id="sr22" size="1" />
+<input type="text" name="sr23" id="sr23" value="6" disabled="true" size="1"/>
+<input type="text" name="sr24" id="sr24" size="1" height="100" /><br>
+<!-- row 5 --><input type="text" name="sr25" id="sr25" size="1" value="3" disabled="true"/>
+<input type="text" name="sr26" id="sr26" value="6" disabled="true"  size="1"/>
+<input type="text" name="sr27" id="sr27" size="1"/>
+<input type="text" name="sr28" id="sr28" value="4" disabled="true" size="1"/>
+<input type="text" name="sr29" id="sr29" size="1"/>
+<input type="text" name="sr30" id="sr30" size="1"/><br>
+<!-- row 6 --><input type="text" name="sr31" id="sr31" size="1"/>
+<input type="text" name="sr32" id="sr32" value="2" disabled="true"  size="1"/>
+<input type="text" name="sr33" id="sr33" size="1"/>
+<input type="text" name="sr34" id="sr34" size="1"/>
+<input type="text" name="sr35" id="sr35" size="1" value="1" disabled="true"/>
+<input type="text" name="sr36" id="sr36" size="1" value="3" disabled="true"/><br><br>
+<button id="mediumsudokuhome" onclick="mediumsudokuhome()">< Home </button>
+<button id="mediumcsudokuans" onclick="mediumcsudokuans()"> Check </button>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<div id="nbynsudoku" hidden="true">
+	<table style="background-color:#000;" height="270" width="430">
+		<tr>
+			<td align="center"><strong id="time2">0 : 0</strong><br><br>
+<!-- row 1 --><input type="text" name="nr1" id="nr1" size="1"  value="3" disabled="true"/>
+<input type="text" name="nr2" id="nr2" size="1" />
+<input type="text" name="nr3" id="nr3" size="1" value="1" disabled="true" />
+
+<input type="text" name="nr4" id="nr4" size="1" value="4" disabled="true"/>
+<input type="text" name="nr5" id="nr5" size="1" />
+<input type="text" name="nr6" id="nr6" size="1" />
+
+<input type="text" name="nr7" id="nr7" size="1" value="8" disabled="true"/>
+<input type="text" name="nr8" id="nr8" size="1" value="7" disabled="true"/>
+<input type="text" name="nr9" id="nr9" size="1" /><br>
+
+<!-- row 2 --><input type="text" name="nr10" id="nr10" size="1"/>
+<input type="text" name="nr11" id="nr11" size="1" />
+<input type="text" name="nr12" id="nr12" size="1" value="8" disabled="true"/>
+
+<input type="text" name="nr13" id="nr13" size="1" />
+<input type="text" name="nr14" id="nr14" size="1" />
+<input type="text" name="nr15" id="nr15" size="1" />
+
+<input type="text" name="nr16" id="nr16" size="1" value="5" disabled="true"/>
+<input type="text" name="nr17" id="nr17" size="1" />
+<input type="text" name="nr18" id="nr18" size="1" /><br>
+
+<!-- row 3 --><input type="text" name="nr19" id="nr19" size="1" value="4" disabled="true"/>
+<input type="text" name="nr20" id="nr20" size="1" value="7" disabled="true"/>
+<input type="text" name="nr21" id="nr21" size="1" />
+
+<input type="text" name="nr22" id="nr22" size="1" />
+<input type="text" name="nr23" id="nr23" size="1" value="3" disabled="true"/>
+<input type="text" name="nr24" id="nr24" size="1"/>
+
+<input type="text" name="nr25" id="nr25" size="1" />
+<input type="text" name="nr26" id="nr26" size="1"/>
+<input type="text" name="nr27" id="nr27" size="1" value="9" disabled="true"/><br>
+
+<!-- row 4 --><input type="text" name="nr28" id="nr28" size="1"/>
+<input type="text" name="nr29" id="nr29" size="1" value="4" disabled="true"/>
+<input type="text" name="nr30" id="nr30" size="1" value="3" disabled="true"/>
+
+<input type="text" name="nr31" id="nr31" size="1" value="2" disabled="true"/>
+<input type="text" name="nr32" id="nr32" size="1"/>
+<input type="text" name="nr33" id="nr33" size="1" />
+
+<input type="text" name="nr34" id="nr34" size="1" value="1" disabled="true"/>
+<input type="text" name="nr35" id="nr35" size="1" />
+<input type="text" name="nr36" id="nr36" size="1"/><br>
+
+<!-- row 5 --><input type="text" name="nr37" id="nr37" size="1" value="2" disabled="true"/>
+<input type="text" name="nr38" id="nr38" size="1" />
+<input type="text" name="nr39" id="nr39" size="1" value="5" disabled="true"/>
+
+<input type="text" name="nr40" id="nr40" size="1" />
+<input type="text" name="nr41" id="nr41" size="1" />
+<input type="text" name="nr42" id="nr42" size="1" value="9" disabled="true"/>
+
+<input type="text" name="nr43" id="nr43" size="1" />
+<input type="text" name="nr44" id="nr44" size="1" value="3" disabled="true"/>
+<input type="text" name="nr45" id="nr45" size="1" /><br>
+
+<!-- row 6 --><input type="text" name="nr46" id="nr46" size="1"/>
+<input type="text" name="nr47" id="nr47" size="1" value="9" disabled="true"/>
+<input type="text" name="nr48" id="nr48" size="1" value="7" disabled="true"/>
+
+<input type="text" name="nr49" id="nr49" size="1"/>
+<input type="text" name="nr50" id="nr50" size="1" value="6" disabled="true"/>
+<input type="text" name="nr51" id="nr51" size="1"/>
+
+<input type="text" name="nr52" id="nr52" size="1"/>
+<input type="text" name="nr53" id="nr53" size="1" />
+<input type="text" name="nr54" id="nr54" size="1" value="4" disabled="true"/><br>
+
+<!-- row 7 --><input type="text" name="nr55" id="nr55" size="1" value="5" disabled="true"/>
+<input type="text" name="nr56" id="nr56" size="1"/>
+<input type="text" name="nr57" id="nr57" size="1"/>
+
+<input type="text" name="nr58" id="nr58" size="1"/>
+<input type="text" name="nr59" id="nr59" size="1" value="2" disabled="true"/>
+<input type="text" name="nr60" id="nr60" size="1" />
+
+<input type="text" name="nr61" id="nr61" size="1" />
+<input type="text" name="nr62" id="nr62" size="1" value="6" disabled="true"/>
+<input type="text" name="nr63" id="nr63" size="1" value="8" disabled="true"/><br>
+
+<!-- row 8 --><input type="text" name="nr64" id="nr64" size="1"/>
+<input type="text" name="nr65" id="nr65" size="1" />
+<input type="text" name="nr66" id="nr66" size="1" />
+
+<input type="text" name="nr67" id="nr67" size="1" value="6" disabled="true"/>
+<input type="text" name="nr68" id="nr68" size="1" value="5" disabled="true"/>
+<input type="text" name="nr69" id="nr69" size="1" value="1" disabled="true"/>
+
+<input type="text" name="nr70" id="nr70" size="1" value="9" disabled="true"/>
+<input type="text" name="nr71" id="nr71" size="1" />
+<input type="text" name="nr72" id="nr72" size="1" /><br>
+
+<!-- row 9 --><input type="text" name="nr73" id="nr73" size="1"/>
+<input type="text" name="nr74" id="nr74" size="1" value="2" disabled="true"/>
+<input type="text" name="nr75" id="nr75" size="1" value="6" disabled="true"/>
+
+<input type="text" name="nr76" id="nr76" size="1" value="9" disabled="true"/>
+<input type="text" name="nr77" id="nr77" size="1" />
+<input type="text" name="nr78" id="nr78" size="1" />
+
+<input type="text" name="nr79" id="nr79" size="1" />
+<input type="text" name="nr80" id="nr80" size="1" />
+<input type="text" name="nr81" id="nr81" size="1" value="1" disabled="true"/><br><br>
+<button id="hardsudokuhome" onclick="hardsudokuhome()">< Home </button>
+<button id="hardcsudokuans" onclick="hardcsudokuans()"> Check </button>
+			</td>
+		</tr>
+	</table>
+</div>
+
+</center>
+
+<script>
+function hardcsudokuans(){
+if(nr2.value==5){
+document.getElementById("nr2").style.borderColor="blue";document.getElementById("nr2").style.color="blue";
+if(nr5.value==9){
+	document.getElementById("nr5").style.borderColor="blue";document.getElementById("nr5").style.color="blue";
+if(nr6.value==6){
+document.getElementById("nr6").style.borderColor="blue";document.getElementById("nr6").style.color="blue";	
+if(nr9.value==2){//row 1 finish
+document.getElementById("nr9").style.borderColor="blue";document.getElementById("nr9").style.color="blue";	
+if(nr10.value==9){
+document.getElementById("nr10").style.borderColor="blue";document.getElementById("nr10").style.color="blue";	
+if(nr11.value==6){
+document.getElementById("nr11").style.borderColor="blue";document.getElementById("nr11").style.color="blue";	
+if(nr13.value==7){
+document.getElementById("nr13").style.borderColor="blue";document.getElementById("nr13").style.color="blue";	
+if(nr14.value==1){
+document.getElementById("nr14").style.borderColor="blue";document.getElementById("nr14").style.color="blue";	
+if(nr15.value==2){
+document.getElementById("nr15").style.borderColor="blue";document.getElementById("nr15").style.color="blue";	
+if(nr17.value==4){
+document.getElementById("nr17").style.borderColor="blue";document.getElementById("nr17").style.color="blue";	
+if(nr18.value==3){//row 2 finish
+document.getElementById("nr18").style.borderColor="blue";document.getElementById("nr18").style.color="blue";	
+if(nr21.value==2){
+document.getElementById("nr21").style.borderColor="blue";document.getElementById("nr21").style.color="blue";	
+if(nr22.value==8){
+document.getElementById("nr22").style.borderColor="blue";document.getElementById("nr22").style.color="blue";	
+if(nr24.value==5){
+document.getElementById("nr24").style.borderColor="blue";document.getElementById("nr24").style.color="blue";	
+if(nr25.value==6){
+document.getElementById("nr25").style.borderColor="blue";document.getElementById("nr25").style.color="blue";	
+if(nr26.value==1){//row 3 finish
+document.getElementById("nr26").style.borderColor="blue";document.getElementById("nr26").style.color="blue";	
+if(nr28.value==6){
+document.getElementById("nr28").style.borderColor="blue";document.getElementById("nr28").style.color="blue";	
+if(nr32.value==7){
+document.getElementById("nr32").style.borderColor="blue";document.getElementById("nr32").style.color="blue";	
+if(nr33.value==8){
+document.getElementById("nr33").style.borderColor="blue";document.getElementById("nr33").style.color="blue";	
+if(nr35.value==9){
+document.getElementById("nr35").style.borderColor="blue";document.getElementById("nr35").style.color="blue";	
+if(nr36.value==5){//rw 4 finish
+document.getElementById("nr36").style.borderColor="blue";document.getElementById("nr36").style.color="blue";	
+if(nr38.value==8){
+document.getElementById("nr38").style.borderColor="blue";document.getElementById("nr38").style.color="blue";	
+if(nr40.value==1){
+document.getElementById("nr40").style.borderColor="blue";document.getElementById("nr40").style.color="blue";	
+if(nr41.value==4){
+document.getElementById("nr41").style.borderColor="blue";document.getElementById("nr41").style.color="blue";	
+if(nr43.value==7){
+document.getElementById("nr43").style.borderColor="blue";document.getElementById("nr43").style.color="blue";	
+if(nr45.value==6){//row 5 finish
+document.getElementById("nr45").style.borderColor="blue";document.getElementById("nr45").style.color="blue";	
+if(nr46.value==1){
+document.getElementById("nr46").style.borderColor="blue";document.getElementById("nr46").style.color="blue";	
+if(nr49.value==5){
+document.getElementById("nr49").style.borderColor="blue";document.getElementById("nr49").style.color="blue";	
+if(nr51.value==3){
+document.getElementById("nr51").style.borderColor="blue";document.getElementById("nr51").style.color="blue";	
+if(nr52.value==2){
+document.getElementById("nr52").style.borderColor="blue";document.getElementById("nr52").style.color="blue";
+if(nr53.value==8){//row 6 finish
+document.getElementById("nr53").style.borderColor="blue";document.getElementById("nr53").style.color="blue";
+if(nr56.value==1){
+document.getElementById("nr56").style.borderColor="blue";document.getElementById("nr56").style.color="blue";
+if(nr57.value==9){
+document.getElementById("nr57").style.borderColor="blue";document.getElementById("nr57").style.color="blue";
+if(nr58.value==3){
+document.getElementById("nr58").style.borderColor="blue";document.getElementById("nr58").style.color="blue";
+if(nr60.value==7){
+document.getElementById("nr60").style.borderColor="blue";document.getElementById("nr60").style.color="blue";
+if(nr61.value==4){//row 7 finish
+document.getElementById("nr61").style.borderColor="blue";document.getElementById("nr61").style.color="blue";
+if(nr64.value==8){
+document.getElementById("nr64").style.borderColor="blue";document.getElementById("nr64").style.color="blue";
+if(nr65.value==3){
+document.getElementById("nr65").style.borderColor="blue";document.getElementById("nr65").style.color="blue";
+if(nr66.value==4){
+document.getElementById("nr66").style.borderColor="blue";document.getElementById("nr66").style.color="blue";
+if(nr71.value==2){
+document.getElementById("nr71").style.borderColor="blue";document.getElementById("nr71").style.color="blue";
+if(nr72.value==7){//row 8 finish
+document.getElementById("nr72").style.borderColor="blue";document.getElementById("nr72").style.color="blue";
+if(nr73.value==7){
+document.getElementById("nr73").style.borderColor="blue";document.getElementById("nr73").style.color="blue";
+if(nr77.value==8){
+document.getElementById("nr77").style.borderColor="blue";document.getElementById("nr77").style.color="blue";
+if(nr78.value==4){
+document.getElementById("nr78").style.borderColor="blue";document.getElementById("nr78").style.color="blue";
+if(nr79.value==3){
+document.getElementById("nr79").style.borderColor="blue";document.getElementById("nr79").style.color="blue";
+if(nr80.value==5){
+document.getElementById("nr80").style.borderColor="blue";document.getElementById("nr80").style.color="blue";
+alert("All numbers are valid..");
+ }
+else{document.getElementById("nr80").style.borderColor="red";document.getElementById("nr80").style.color="red";} 
+ }
+else{document.getElementById("nr79").style.borderColor="red";document.getElementById("nr79").style.color="red";} 
+}
+else{document.getElementById("nr78").style.borderColor="red";document.getElementById("nr78").style.color="red";}
+}
+else{document.getElementById("nr77").style.borderColor="red";document.getElementById("nr77").style.color="red";}
+}
+else{document.getElementById("nr73").style.borderColor="red";document.getElementById("nr73").style.color="red";} 
+}//row 8 finish
+else{document.getElementById("nr72").style.borderColor="red";document.getElementById("nr72").style.color="red";}
+}
+else{document.getElementById("nr71").style.borderColor="red";document.getElementById("nr71").style.color="red";}
+}	
+else{document.getElementById("nr66").style.borderColor="red";document.getElementById("nr66").style.color="red";}
+}
+else{document.getElementById("nr65").style.borderColor="red";document.getElementById("nr65").style.color="red";}
+}
+else{document.getElementById("nr64").style.borderColor="red";document.getElementById("nr64").style.color="red";}
+}//row 7 finish
+else{document.getElementById("nr61").style.borderColor="red";document.getElementById("nr61").style.color="red";}
+}
+else{document.getElementById("nr60").style.borderColor="red";document.getElementById("nr60").style.color="red";}
+}
+else{document.getElementById("nr58").style.borderColor="red";document.getElementById("nr58").style.color="red";}
+}
+else{document.getElementById("nr57").style.borderColor="red";document.getElementById("nr57").style.color="red";}
+}
+else{document.getElementById("nr56").style.borderColor="red";document.getElementById("nr56").style.color="red";}
+}//row 6 finish
+else{document.getElementById("nr53").style.borderColor="red";document.getElementById("nr53").style.color="red";}
+}
+else{document.getElementById("nr52").style.borderColor="red";document.getElementById("nr52").style.color="red";}
+}
+else{document.getElementById("nr51").style.borderColor="red";document.getElementById("nr51").style.color="red";}
+}
+else{document.getElementById("nr49").style.borderColor="red";document.getElementById("nr49").style.color="red";}
+}
+else{document.getElementById("nr46").style.borderColor="red";document.getElementById("nr46").style.color="red";}
+}//row 5 finish
+else{document.getElementById("nr45").style.borderColor="red";document.getElementById("nr45").style.color="red";}
+}
+else{document.getElementById("nr43").style.borderColor="red";document.getElementById("nr43").style.color="red";}
+}
+else{document.getElementById("nr41").style.borderColor="red";document.getElementById("nr41").style.color="red";}
+}
+else{document.getElementById("nr40").style.borderColor="red";document.getElementById("nr40").style.color="red";}
+}
+else{document.getElementById("nr38").style.borderColor="red";document.getElementById("nr38").style.color="red";}
+}//row 4 finish
+else{document.getElementById("nr36").style.borderColor="red";document.getElementById("nr36").style.color="red";}
+}
+else{document.getElementById("nr35").style.borderColor="red";document.getElementById("nr35").style.color="red";}
+}
+else{document.getElementById("nr33").style.borderColor="red";document.getElementById("nr33").style.color="red";}
+}
+else{document.getElementById("nr32").style.borderColor="red";document.getElementById("nr32").style.color="red";}
+}
+else{document.getElementById("nr28").style.borderColor="red";document.getElementById("nr28").style.color="red";}
+}//row 3 finish
+else{document.getElementById("nr26").style.borderColor="red";document.getElementById("nr26").style.color="red";}
+}
+else{document.getElementById("nr25").style.borderColor="red";document.getElementById("nr25").style.color="red";}
+}
+else{document.getElementById("nr24").style.borderColor="red";document.getElementById("nr24").style.color="red";}
+}
+else{document.getElementById("nr22").style.borderColor="red";document.getElementById("nr22").style.color="red";}
+}
+else{document.getElementById("nr21").style.borderColor="red";document.getElementById("nr21").style.color="red";}
+}//row 2 finish
+else{document.getElementById("nr18").style.borderColor="red";document.getElementById("nr18").style.color="red";}
+}
+else{document.getElementById("nr17").style.borderColor="red";document.getElementById("nr17").style.color="red";}
+}
+else{document.getElementById("nr15").style.borderColor="red";document.getElementById("nr15").style.color="red";}
+}
+else{document.getElementById("nr14").style.borderColor="red";document.getElementById("nr14").style.color="red";}
+}
+else{document.getElementById("nr13").style.borderColor="red";document.getElementById("nr13").style.color="red";}
+}
+else{document.getElementById("nr11").style.borderColor="red";document.getElementById("nr11").style.color="red";}
+}
+else{document.getElementById("nr10").style.borderColor="red";document.getElementById("nr10").style.color="red";}
+}//row 1 finish
+else{document.getElementById("nr9").style.borderColor="red";document.getElementById("nr9").style.color="red";}
+}
+else{document.getElementById("nr6").style.borderColor="red";document.getElementById("nr6").style.color="red";}
+}
+else{document.getElementById("nr5").style.borderColor="red";document.getElementById("nr5").style.color="red";}
+}
+else{document.getElementById("nr2").style.borderColor="red";document.getElementById("nr2").style.color="red";}
+}	
+var	t,h=0,s=0;
+function hardsudoku(){
+document.getElementById('sudokuchoice').hidden=true;
+document.getElementById('nbynsudoku').hidden=false;		
+run();
+function run(){
+document.getElementById('time2').innerHTML="Time-"+h+" : "+s;s++;if(s==60){h=h+1;s=0;}
+if(h==30){clearTimeout(t);alert("Time out..");}else{t=setTimeout(run,1000);}}
+}
+function hardsudokuhome(){
+	s=h=0;
+	document.getElementById('time2').innerHTML="Time-"+h+" : "+s;
+	clearTimeout(t);
+	document.getElementById('container').hidden=false;
+document.getElementById('nbynsudoku').hidden=true;	
+document.location.reload(true);	
+}
+function mediumsudoku(){
+document.getElementById('sudokuchoice').hidden=true;
+document.getElementById('sbyssudoku').hidden=false;	
+run();
+function run(){
+document.getElementById('time1').innerHTML="Time-"+h+" : "+s;s++;if(s==60){h=h+1;s=0;}
+if(h==30){clearTimeout(t);}else{t=setTimeout(run,1000);}}
+}
+function mediumsudokuhome(){
+	s=h=0;
+	document.getElementById('time1').innerHTML="Time-"+h+" : "+s;
+	document.location.reload(true);
+	document.getElementById('container').hidden=false;
+	document.getElementById('sbyssudoku').hidden=true;
+}
+function mediumcsudokuans(){
+if(sr1.value==1){document.getElementById("sr1").style.borderColor="blue";document.getElementById("sr1").style.color="blue";
+	if(sr3.value==6){
+document.getElementById("sr3").style.borderColor="blue";document.getElementById("sr3").style.color="blue";	
+		if(sr4.value==3){
+document.getElementById("sr4").style.borderColor="blue";document.getElementById("sr4").style.color="blue";			if(sr6.value==5){//row 1 finish.
+document.getElementById("sr6").style.borderColor="blue";document.getElementById("sr6").style.color="blue";	
+				if(sr7.value==2){
+document.getElementById("sr7").style.borderColor="blue";document.getElementById("sr7").style.color="blue";
+					if(sr8.value==5){
+document.getElementById("sr8").style.borderColor="blue";document.getElementById("sr8").style.color="blue";						if(sr11.value==4){
+document.getElementById("sr11").style.borderColor="blue";document.getElementById("sr11").style.color="blue";						if(sr12.value==6){//row 2 finish
+document.getElementById("sr12").style.borderColor="blue";document.getElementById("sr12").style.color="blue";							if(sr14.value==1){
+document.getElementById("sr14").style.borderColor="blue";document.getElementById("sr14").style.color="blue";								if(sr16.value==5){
+document.getElementById("sr16").style.borderColor="blue";document.getElementById("sr16").style.color="blue";									if(sr17.value==3){//row 3 finish
+document.getElementById("sr17").style.borderColor="blue";document.getElementById("sr17").style.color="blue";										if(sr19.value==5){
+document.getElementById("sr19").style.borderColor="blue";document.getElementById("sr19").style.color="blue";											if(sr21.value==4){
+document.getElementById("sr21").style.borderColor="blue";document.getElementById("sr21").style.color="blue";												if(sr22.value==2){
+document.getElementById("sr22").style.borderColor="blue";document.getElementById("sr22").style.color="blue";													if(sr24.value==1){//row 4 finish
+document.getElementById("sr24").style.borderColor="blue";document.getElementById("sr24").style.color="blue";														if(sr27.value==1){
+document.getElementById("sr27").style.borderColor="blue";document.getElementById("sr27").style.color="blue";															if(sr29.value==5){
+document.getElementById("sr29").style.borderColor="blue";document.getElementById("sr29").style.color="blue";																if(sr30.value==2){//row 5 finish
+document.getElementById("sr30").style.borderColor="blue";document.getElementById("sr30").style.color="blue";																	if(sr31.value==4){
+document.getElementById("sr31").style.borderColor="blue";document.getElementById("sr31").style.color="blue";
+																			if(sr33.value==5){
+document.getElementById("sr33").style.borderColor="blue";document.getElementById("sr33").style.color="blue";																				if(sr34.value==6){
+document.getElementById("sr34").style.borderColor="blue";document.getElementById("sr34").style.color="blue";													alert("All values are valid...");	}
+else{document.getElementById("sr34").style.borderColor="red";document.getElementById("sr34").style.color="red";}
+																			}
+else{document.getElementById("sr33").style.borderColor="red";document.getElementById("sr33").style.color="red";}		}
+else{document.getElementById("sr31").style.borderColor="red";document.getElementById("sr31").style.color="red";}																		
+																	}
+else{document.getElementById("sr30").style.borderColor="red";document.getElementById("sr30").style.color="red";}																	
+																}
+else{document.getElementById("sr29").style.borderColor="red";document.getElementById("sr29").style.color="red";}																
+															}
+else{document.getElementById("sr27").style.borderColor="red";document.getElementById("sr27").style.color="red";}															
+														}
+else{document.getElementById("sr24").style.borderColor="red";document.getElementById("sr24").style.color="red";}														
+													}
+else{document.getElementById("sr22").style.borderColor="red";document.getElementById("sr22").style.color="red";}													
+												}
+else{document.getElementById("sr21").style.borderColor="red";document.getElementById("sr21").style.color="red";}												
+											}
+else{document.getElementById("sr19").style.borderColor="red";document.getElementById("sr19").style.color="red";}											
+										}
+else{document.getElementById("sr17").style.borderColor="red";document.getElementById("sr17").style.color="red";}										
+									}
+else{document.getElementById("sr17").style.borderColor="red";document.getElementById("sr16").style.color="red";}									
+								}
+else{document.getElementById("sr14").style.borderColor="red";document.getElementById("sr14").style.color="red";}
+							}
+else{document.getElementById("sr12").style.borderColor="red";document.getElementById("sr12").style.color="red";}
+}
+else{document.getElementById("sr11").style.borderColor="red";document.getElementById("sr11").style.color="red";}				
+	}
+else{document.getElementById("sr8").style.borderColor="red";document.getElementById("sr8").style.color="red";}
+				}
+else{document.getElementById("sr7").style.borderColor="red";document.getElementById("sr7").style.color="red";}				
+			}
+else{document.getElementById("sr6").style.borderColor="red";document.getElementById("sr6").style.color="red";}
+}
+else{document.getElementById("sr4").style.borderColor="red";document.getElementById("sr4").style.color="red";}
+}
+else{document.getElementById("sr3").style.borderColor="red";document.getElementById("sr3").style.color="red";}
+}
+else{document.getElementById("sr1").style.borderColor="red";document.getElementById("sr1").style.color="red";}
+
+}
+
+
+
+	function homeee(){
+	document.getElementById('container').hidden=false;
+	document.getElementById('sudokuchoice').hidden=true;		
+	}
+function sudoku(){
+document.getElementById('container').hidden=true;
+document.getElementById('sudokuchoice').hidden=false;
+}
+function easysudoku(){
+document.getElementById("sudokuchoice").hidden=true;
+document.getElementById('fbyfsudoku').hidden=false;
+run();
+function run(){
+document.getElementById('time').innerHTML="Time-"+h+" : "+s;s++;if(s==60){h=h+1;s=0;}
+if(h==30){clearTimeout(t);}else{t=setTimeout(run,1000);}}
+}
+
+
+function sudoku4home(){
+	s=h=0;
+	document.getElementById('time').innerHTML="Time-"+h+" : "+s;
+clearTimeout(t);
+document.location.reload(true);
+document.getElementById('fbyfsudoku').hidden=true;
+document.getElementById('container').hidden=false;
+}
+
+function csudokuans(){
+if(r1.value==1){document.getElementById("r1").style.borderColor="blue";document.getElementById("r1").style.color="blue";
+if(r3.value==4){document.getElementById("r3").style.borderColor="blue";document.getElementById("r3").style.color="blue";
+if(r4.value==2){document.getElementById("r4").style.borderColor="blue";document.getElementById("r4").style.color="blue";
+if(r5.value==2){document.getElementById("r5").style.borderColor="blue";document.getElementById("r5").style.color="blue";
+if(r6.value==4){document.getElementById("r6").style.borderColor="blue";document.getElementById("r6").style.color="blue";
+if(r8.value==1){document.getElementById("r8").style.borderColor="blue";document.getElementById("r8").style.color="blue";
+if(r9.value==4){document.getElementById("r9").style.borderColor="blue";document.getElementById("r9").style.color="blue";
+if(r10.value==2){
+	document.getElementById("r10").style.borderColor="blue";document.getElementById("r10").style.color="blue";
+if(r12.value==3){document.getElementById("r12").style.borderColor="blue";document.getElementById("r12").style.color="blue";
+if(r14.value==1){document.getElementById("r14").style.borderColor="blue";document.getElementById("r14").style.color="blue";
+if(r15.value==2){document.getElementById("r15").style.borderColor="blue";document.getElementById("r15").style.color="blue";
+alert("All numbers are valid..");
+document.location.reload(true);
+document.getElementById("fbyfsudoku").hidden=true;
+document.getElementById("sudokuchoice").hidden=false;
+}else{document.getElementById("r15").style.borderColor="red";document.getElementById("r15").style.color="red";}
+}else{document.getElementById("r14").style.borderColor="red";document.getElementById("r14").style.color="red";}
+}else{document.getElementById("r12").style.borderColor="red";document.getElementById("r12").style.color="red";}	
+}else{document.getElementById("r10").style.borderColor="red";document.getElementById("r10").style.color="red";}
+}else{document.getElementById("r9").style.borderColor="red";document.getElementById("r9").style.color="red";}
+}else{document.getElementById("r8").style.borderColor="red";document.getElementById("r18").style.color="red";}
+}else{document.getElementById("r6").style.borderColor="red";document.getElementById("r6").style.color="red";}
+}else{document.getElementById("r5").style.borderColor="red";document.getElementById("r5").style.color="red";}
+}else{document.getElementById("r4").style.borderColor="red";document.getElementById("r4").style.color="red";}
+}else{document.getElementById("r3").style.borderColor="red";document.getElementById("r3").style.color="red";}
+}else{document.getElementById("r1").style.borderColor="red";document.getElementById("r1").style.color="red";}
+}
+	var setx='X';
+	var seto='O';
+	var setvalue=0;
+	var xs=0;var os=0;
+	var gp1,gp2,gp3,gp4,gp5,gp6,gp7,gp8,gp9;
+function cls(){
+	close("MiniGame.html");
+}
+var getwidth=470;
+function createdby(){
+document.getElementById('title').hidden=true;document.getElementById('line').hidden=true;
+document.getElementById('t').hidden=true;document.getElementById('s').hidden=true;
+document.getElementById('m').hidden=true;document.getElementById('createdby').hidden=true;
+document.getElementById('close').hidden=true;document.getElementById('home2').hidden=true;
+getwidth=getwidth-10;if(getwidth<=0){createdby1();function createdby1()
+{document.getElementById('container').style.backgroundColor="darkred";getwidth=getwidth+10;
+if(getwidth>=470){document.getElementById('myname').hidden=false;document.getElementById('home2').hidden=false;
+clearTimeout();}else{document.getElementById("container").style.width=getwidth+'px';setTimeout(createdby1,50);
+}}}else{document.getElementById("container").style.width=getwidth+'px';setTimeout(createdby,50);}}
+
+function home2(){document.getElementById('title').hidden=false;document.getElementById('line').hidden=false;document.getElementById('t').hidden=false;document.getElementById('s').hidden=false;
+	document.getElementById('m').hidden=false;document.getElementById('createdby').hidden=false;
+	document.getElementById('close').hidden=false;document.getElementById('home2').hidden=true;	
+document.getElementById('myname').hidden=true;document.getElementById('container').style.backgroundColor="#000";}
+
+	function home(){
+	document.getElementById('container2').hidden=true;	
+	document.getElementById('T_game_place').hidden=true;
+	document.getElementById('container').hidden=false;
+	xs=0;document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+	os=0;document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+	}
+	function tictac(){
+	document.getElementById('container').hidden=true;
+	document.getElementById('container2').hidden=false;	
+	document.getElementById('T_game_place').hidden=false;
+	document.getElementById('title2').innerHTML="Mini Game : Tic Tac";		
+	}
+	function playagain(){setvalue=0;document.getElementById('place1').style.backgroundColor="black";
+document.getElementById('place1').innerHTML="1";document.getElementById('place1').style.color="black";
+document.getElementById('place2').style.backgroundColor="black";document.getElementById('place2').innerHTML="2";document.getElementById('place2').style.color="black";document.getElementById('place3').style.backgroundColor="black";document.getElementById('place3').innerHTML="3";		
+			document.getElementById('place3').style.color="black";
+			
+			document.getElementById('place4').style.backgroundColor="black";
+			document.getElementById('place4').innerHTML="4";		
+			document.getElementById('place4').style.color="black";						
+			
+			document.getElementById('place5').style.backgroundColor="black";
+			document.getElementById('place5').innerHTML="5";		
+			document.getElementById('place5').style.color="black";				
+
+			document.getElementById('place6').style.backgroundColor="black";
+			document.getElementById('place6').innerHTML="6";		
+			document.getElementById('place6').style.color="black";
+
+			document.getElementById('place7').style.backgroundColor="black";
+			document.getElementById('place7').innerHTML="7";		
+			document.getElementById('place7').style.color="black";
+
+			document.getElementById('place8').style.backgroundColor="black";
+			document.getElementById('place8').innerHTML="8";		
+			document.getElementById('place8').style.color="black";						
+
+			document.getElementById('place9').style.backgroundColor="black";
+			document.getElementById('place9').innerHTML="9";		
+			document.getElementById('place9').style.color="black";
+			document.getElementById('diswinner').innerHTML=" ";			
+	}
+function gochplace1(){
+		if(setvalue%2==0){
+		document.getElementById('place1').innerHTML=setx;
+		document.getElementById('place1').style.backgroundColor="white";
+		document.getElementById('place1').style.color="black";
+		setvalue=setvalue+1;
+		gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//	[1]check 1 2 3
+		if(gp1=='X'&&gp2=='X'&&gp3=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";			
+			}
+//[2]check 4 5 6		
+		if(gp4=='X'&&gp5=='X'&&gp6=='X'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+						xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+// [3]check 7 8 9
+		if(gp7=='X'&&gp8=='X'&&gp9=='X'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+						xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+// [4]check 1 5 9		
+		if(gp1=='X'&&gp5=='X'&&gp9=='X'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+			s=s+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+s;
+		}
+// [5]check 3 5 7
+		if(gp3=='X'&&gp5=='X'&&gp7=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+						xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+		}
+// [6]check 1 4 7
+		if(gp1=='X'&&gp4=='X'&&gp7=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+						xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+// [7]check 2 5 8 		
+		if(gp2=='X'&&gp5=='X'&&gp8=='X'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+						xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}		
+// [8]check 3 6 9
+		if(gp3=='X'&&gp6=='X'&&gp9=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+						xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+		}
+		else{
+		document.getElementById('place1').style.color="white";			
+		document.getElementById('place1').style.backgroundColor="#555";			
+		document.getElementById('place1').innerHTML=seto;	
+		setvalue=setvalue+1;
+		gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//[1]check 1 2 3		
+		if(gp1=='O'&&gp2=='O'&&gp3=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+						os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+//[2]check 4 5 6 
+	if(gp4=='O'&&gp5=='O'&&gp6=='O'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+					os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+//[3] check 7 8 9
+		if(gp7=='O'&&gp8=='O'&&gp9=='O'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+				os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";		
+		}
+//[4] check 1 5 9		
+		if(gp1=='O'&&gp5=='O'&&gp9=='O'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+					os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+//[5] check 3 5 7
+		if(gp3=='O'&&gp5=='O'&&gp7=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+					os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+//[6]check 1 4 7
+		if(gp1=='O'&&gp4=='O'&&gp7=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+					os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+//[7]check 2 5 8
+		if(gp2=='O'&&gp5=='O'&&gp8=='O'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+					os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+//[6]check 3 6 9
+		if(gp3=='O'&&gp6=='O'&&gp9=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+					os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+		}
+	}  
+
+
+
+
+function gochplace2(){
+		if(setvalue%2==0){
+		document.getElementById('place2').innerHTML=setx;
+		document.getElementById('place2').style.backgroundColor="white";		
+		document.getElementById('place2').style.color="black";		
+		setvalue=setvalue+1;
+		gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//	[1]check 1 2 3
+		if(gp1=='X'&&gp2=='X'&&gp3=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+					xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+//[2]check 4 5 6		
+		if(gp4=='X'&&gp5=='X'&&gp6=='X'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+							xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		
+		}
+// [3]check 7 8 9
+		if(gp7=='X'&&gp8=='X'&&gp9=='X'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+							xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [4]check 1 5 9		
+		if(gp1=='X'&&gp5=='X'&&gp9=='X'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+							xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [5]check 3 5 7
+		if(gp3=='X'&&gp5=='X'&&gp7=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+							xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [6]check 1 4 7
+		if(gp1=='X'&&gp4=='X'&&gp7=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+							xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [7]check 2 5 8 		
+		if(gp2=='X'&&gp5=='X'&&gp8=='X'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+							xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}		
+// [8]check 3 6 9
+		if(gp3=='X'&&gp6=='X'&&gp9=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+							xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+		}
+		else{
+		document.getElementById('place2').style.color="white";			
+		document.getElementById('place2').style.backgroundColor="#555";					
+		document.getElementById('place2').innerHTML=seto;	
+		setvalue=setvalue+1;
+				gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//[1]check 1 2 3		
+		if(gp1=='O'&&gp2=='O'&&gp3=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+							os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[2]check 4 5 6 
+	if(gp4=='O'&&gp5=='O'&&gp6=='O'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+					os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+//[3] check 7 8 9
+		if(gp7=='O'&&gp8=='O'&&gp9=='O'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+								os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[4] check 1 5 9		
+		if(gp1=='O'&&gp5=='O'&&gp9=='O'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+								os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+
+		}
+//[5] check 3 5 7
+		if(gp3=='O'&&gp5=='O'&&gp7=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+								os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[6]check 1 4 7
+		if(gp1=='O'&&gp4=='O'&&gp7=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+								os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[7]check 2 5 8
+		if(gp2=='O'&&gp5=='O'&&gp8=='O'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+								os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[6]check 3 6 9
+		if(gp3=='O'&&gp6=='O'&&gp9=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+								os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+		}	
+		document.getElementById('place2').style.fontSize="17pt";
+	}
+
+
+
+
+
+		function gochplace3(){
+		if(setvalue%2==0){
+		document.getElementById('place3').innerHTML=setx;
+		document.getElementById('place3').style.backgroundColor="white";		
+		document.getElementById('place3').style.color="black";		
+		setvalue=setvalue+1;
+		gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//	[1]check 1 2 3
+		if(gp1=='X'&&gp2=='X'&&gp3=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+								xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+//[2]check 4 5 6		
+		if(gp4=='X'&&gp5=='X'&&gp6=='X'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+										xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [3]check 7 8 9
+		if(gp7=='X'&&gp8=='X'&&gp9=='X'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+											xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [4]check 1 5 9		
+		if(gp1=='X'&&gp5=='X'&&gp9=='X'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+														xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [5]check 3 5 7
+		if(gp3=='X'&&gp5=='X'&&gp7=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+										xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+// [6]check 1 4 7
+		if(gp1=='X'&&gp4=='X'&&gp7=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+								xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";			
+		}
+// [7]check 2 5 8 		
+		if(gp2=='X'&&gp5=='X'&&gp8=='X'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+									xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";		
+		}		
+// [8]check 3 6 9
+		if(gp3=='X'&&gp6=='X'&&gp9=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+									xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";		
+		}
+		}
+		else{
+		document.getElementById('place3').style.color="white";			
+		document.getElementById('place3').style.backgroundColor="#555";					
+		document.getElementById('place3').innerHTML=seto;	
+		setvalue=setvalue+1;
+				gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//[1]check 1 2 3		
+		if(gp1=='O'&&gp2=='O'&&gp3=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+//[2]check 4 5 6 
+	if(gp4=='O'&&gp5=='O'&&gp6=='O'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		
+		}
+//[3] check 7 8 9
+		if(gp7=='O'&&gp8=='O'&&gp9=='O'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+				os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+//[4] check 1 5 9		
+		if(gp1=='O'&&gp5=='O'&&gp9=='O'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+				os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+//[5] check 3 5 7
+		if(gp3=='O'&&gp5=='O'&&gp7=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+				os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+//[6]check 1 4 7
+		if(gp1=='O'&&gp4=='O'&&gp7=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+				os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+//[7]check 2 5 8
+		if(gp2=='O'&&gp5=='O'&&gp8=='O'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+				os=xos+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="O player is WIN";				
+		}
+//[6]check 3 6 9
+		if(gp3=='O'&&gp6=='O'&&gp9=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+	os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";				
+		}
+		}	
+		document.getElementById('place3').style.fontSize="17pt";			
+	}
+
+
+
+
+
+		function gochplace4(){
+		if(setvalue%2==0){
+		document.getElementById('place4').innerHTML=setx;
+		document.getElementById('place4').style.backgroundColor="white";		
+		document.getElementById('place4').style.color="black";		
+		setvalue=setvalue+1;
+		gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//	[1]check 1 2 3
+		if(gp1=='X'&&gp2=='X'&&gp3=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";			
+
+		}
+//[2]check 4 5 6		
+		if(gp4=='X'&&gp5=='X'&&gp6=='X'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+// [3]check 7 8 9
+		if(gp7=='X'&&gp8=='X'&&gp9=='X'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+// [4]check 1 5 9		
+		if(gp1=='X'&&gp5=='X'&&gp9=='X'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+// [5]check 3 5 7
+		if(gp3=='X'&&gp5=='X'&&gp7=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+// [6]check 1 4 7
+		if(gp1=='X'&&gp4=='X'&&gp7=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+// [7]check 2 5 8 		
+		if(gp2=='X'&&gp5=='X'&&gp8=='X'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}		
+// [8]check 3 6 9
+		if(gp3=='X'&&gp6=='X'&&gp9=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+					xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+		}
+		else{
+		document.getElementById('place4').style.color="white";			
+		document.getElementById('place4').style.backgroundColor="#555";					
+		document.getElementById('place4').innerHTML=seto;	
+		setvalue=setvalue+1;
+				gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//[1]check 1 2 3		
+		if(gp1=='O'&&gp2=='O'&&gp3=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+		}
+//[2]check 4 5 6 
+	if(gp4=='O'&&gp5=='O'&&gp6=='O'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+		os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+					}
+//[3] check 7 8 9
+		if(gp7=='O'&&gp8=='O'&&gp9=='O'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";	
+
+		}
+//[4] check 1 5 9		
+		if(gp1=='O'&&gp5=='O'&&gp9=='O'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[5] check 3 5 7
+		if(gp3=='O'&&gp5=='O'&&gp7=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[6]check 1 4 7
+		if(gp1=='O'&&gp4=='O'&&gp7=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[7]check 2 5 8
+		if(gp2=='O'&&gp5=='O'&&gp8=='O'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[8]check 3 6 9
+		if(gp3=='O'&&gp6=='O'&&gp9=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+		}	
+	}
+		
+
+
+		function gochplace5(){
+		if(setvalue%2==0){
+		document.getElementById('place5').innerHTML=setx;
+		document.getElementById('place5').style.backgroundColor="white";		
+		document.getElementById('place5').style.color="black";		
+		setvalue=setvalue+1;
+		gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//	[1]check 1 2 3
+		if(gp1=='X'&&gp2=='X'&&gp3=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		
+		}
+//[2]check 4 5 6		
+		if(gp4=='X'&&gp5=='X'&&gp6=='X'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+		xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+// [3]check 7 8 9
+		if(gp7=='X'&&gp8=='X'&&gp9=='X'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [4]check 1 5 9		
+		if(gp1=='X'&&gp5=='X'&&gp9=='X'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [5]check 3 5 7
+		if(gp3=='X'&&gp5=='X'&&gp7=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";			
+		}
+// [6]check 1 4 7
+		if(gp1=='X'&&gp4=='X'&&gp7=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+					}
+// [7]check 2 5 8 		
+		if(gp2=='X'&&gp5=='X'&&gp8=='X'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}		
+// [8]check 3 6 9
+		if(gp3=='X'&&gp6=='X'&&gp9=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+		}
+		else{
+		document.getElementById('place5').style.color="white";			
+		document.getElementById('place5').style.backgroundColor="#555";					
+		document.getElementById('place5').innerHTML=seto;	
+		setvalue=setvalue+1;
+				gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//[1]check 1 2 3		
+		if(gp1=='O'&&gp2=='O'&&gp3=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[2]check 4 5 6 
+	if(gp4=='O'&&gp5=='O'&&gp6=='O'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+		os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[3] check 7 8 9
+		if(gp7=='O'&&gp8=='O'&&gp9=='O'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+	os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[4] check 1 5 9		
+		if(gp1=='O'&&gp5=='O'&&gp9=='O'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[5] check 3 5 7
+		if(gp3=='O'&&gp5=='O'&&gp7=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[6]check 1 4 7
+		if(gp1=='O'&&gp4=='O'&&gp7=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[7]check 2 5 8
+		if(gp2=='O'&&gp5=='O'&&gp8=='O'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[8]check 3 6 9
+		if(gp3=='O'&&gp6=='O'&&gp9=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+		}	
+		document.getElementById('place5').style.fontSize="17pt";			
+	}
+
+
+
+		function gochplace6(){
+		if(setvalue%2==0){
+		document.getElementById('place6').innerHTML=setx;
+		document.getElementById('place6').style.backgroundColor="white";		
+		document.getElementById('place6').style.color="black";		
+		setvalue=setvalue+1;
+		gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//	[1]check 1 2 3
+		if(gp1=='X'&&gp2=='X'&&gp3=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+		xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";	
+		}
+//[2]check 4 5 6		
+		if(gp4=='X'&&gp5=='X'&&gp6=='X'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+		xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [3]check 7 8 9
+		if(gp7=='X'&&gp8=='X'&&gp9=='X'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [4]check 1 5 9		
+		if(gp1=='X'&&gp5=='X'&&gp9=='X'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [5]check 3 5 7
+		if(gp3=='X'&&gp5=='X'&&gp7=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [6]check 1 4 7
+		if(gp1=='X'&&gp4=='X'&&gp7=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [7]check 2 5 8 		
+		if(gp2=='X'&&gp5=='X'&&gp8=='X'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}		
+// [8]check 3 6 9
+		if(gp3=='X'&&gp6=='X'&&gp9=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+		}
+		else{
+		document.getElementById('place6').style.color="white";			
+		document.getElementById('place6').style.backgroundColor="#555";					
+		document.getElementById('place6').innerHTML=seto;	
+		setvalue=setvalue+1;
+				gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//[1]check 1 2 3		
+		if(gp1=='O'&&gp2=='O'&&gp3=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[2]check 4 5 6 
+	if(gp4=='O'&&gp5=='O'&&gp6=='O'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+				os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[3] check 7 8 9
+		if(gp7=='O'&&gp8=='O'&&gp9=='O'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+				os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[4] check 1 5 9		
+		if(gp1=='O'&&gp5=='O'&&gp9=='O'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+				os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[5] check 3 5 7
+		if(gp3=='O'&&gp5=='O'&&gp7=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+				os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[6]check 1 4 7
+		if(gp1=='O'&&gp4=='O'&&gp7=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+				os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[7]check 2 5 8
+		if(gp2=='O'&&gp5=='O'&&gp8=='O'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+				os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[6]check 3 6 9
+		if(gp3=='O'&&gp6=='O'&&gp9=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+				os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+		}	
+		document.getElementById('place6').style.fontSize="17pt";			
+	}
+
+
+
+		function gochplace7(){
+		if(setvalue%2==0){
+		document.getElementById('place7').innerHTML=setx;
+		document.getElementById('place7').style.backgroundColor="white";		
+		document.getElementById('place7').style.color="black";		
+		setvalue=setvalue+1;
+		gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//	[1]check 1 2 3
+		if(gp1=='X'&&gp2=='X'&&gp3=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+				xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+//[2]check 4 5 6		
+		if(gp4=='X'&&gp5=='X'&&gp6=='X'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+					xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [3]check 7 8 9
+		if(gp7=='X'&&gp8=='X'&&gp9=='X'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+					xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [4]check 1 5 9		
+		if(gp1=='X'&&gp5=='X'&&gp9=='X'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+						xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [5]check 3 5 7
+		if(gp3=='X'&&gp5=='X'&&gp7=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [6]check 1 4 7
+		if(gp1=='X'&&gp4=='X'&&gp7=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+						xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [7]check 2 5 8 		
+		if(gp2=='X'&&gp5=='X'&&gp8=='X'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+				xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";		
+		}		
+// [8]check 3 6 9
+		if(gp3=='X'&&gp6=='X'&&gp9=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";			
+		}
+		}
+		else{
+		document.getElementById('place7').style.color="white";			
+		document.getElementById('place7').style.backgroundColor="#555";					
+		document.getElementById('place7').innerHTML=seto;	
+		setvalue=setvalue+1;
+				gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//[1]check 1 2 3		
+		if(gp1=='O'&&gp2=='O'&&gp3=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[2]check 4 5 6 
+	if(gp4=='O'&&gp5=='O'&&gp6=='O'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[3] check 7 8 9
+		if(gp7=='O'&&gp8=='O'&&gp9=='O'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[4] check 1 5 9		
+		if(gp1=='O'&&gp5=='O'&&gp9=='O'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[5] check 3 5 7
+		if(gp3=='O'&&gp5=='O'&&gp7=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[6]check 1 4 7
+		if(gp1=='O'&&gp4=='O'&&gp7=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[7]check 2 5 8
+		if(gp2=='O'&&gp5=='O'&&gp8=='O'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[6]check 3 6 9
+		if(gp3=='O'&&gp6=='O'&&gp9=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+		}	
+		document.getElementById('place7').style.fontSize="17pt";			
+	}
+		
+
+
+
+		function gochplace8(){
+		if(setvalue%2==0){
+		document.getElementById('place8').innerHTML=setx;
+		document.getElementById('place8').style.backgroundColor="white";		
+		document.getElementById('place8').style.color="black";		
+		setvalue=setvalue+1;
+		gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//	[1]check 1 2 3
+		if(gp1=='X'&&gp2=='X'&&gp3=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+//[2]check 4 5 6		
+		if(gp4=='X'&&gp5=='X'&&gp6=='X'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+		xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [3]check 7 8 9
+		if(gp7=='X'&&gp8=='X'&&gp9=='X'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";		}
+// [4]check 1 5 9		
+		if(gp1=='X'&&gp5=='X'&&gp9=='X'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+					}
+// [5]check 3 5 7
+		if(gp3=='X'&&gp5=='X'&&gp7=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [6]check 1 4 7
+		if(gp1=='X'&&gp4=='X'&&gp7=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [7]check 2 5 8 		
+		if(gp2=='X'&&gp5=='X'&&gp8=='X'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+	xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}		
+// [8]check 3 6 9
+		if(gp3=='X'&&gp6=='X'&&gp9=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+		}
+		else{
+		document.getElementById('place8').style.color="white";			
+		document.getElementById('place8').style.backgroundColor="#555";					
+		document.getElementById('place8').innerHTML=seto;	
+		setvalue=setvalue+1;
+				gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//[1]check 1 2 3		
+		if(gp1=='O'&&gp2=='O'&&gp3=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[2]check 4 5 6 
+	if(gp4=='O'&&gp5=='O'&&gp6=='O'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[3] check 7 8 9
+		if(gp7=='O'&&gp8=='O'&&gp9=='O'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[4] check 1 5 9		
+		if(gp1=='O'&&gp5=='O'&&gp9=='O'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[5] check 3 5 7
+		if(gp3=='O'&&gp5=='O'&&gp7=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[6]check 1 4 7
+		if(gp1=='O'&&gp4=='O'&&gp7=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[7]check 2 5 8
+		if(gp2=='O'&&gp5=='O'&&gp8=='O'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[6]check 3 6 9
+		if(gp3=='O'&&gp6=='O'&&gp9=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+		}	
+		document.getElementById('place8').style.fontSize="17pt";			
+		}
+
+
+
+		function gochplace9(){
+		if(setvalue%2==0){
+		document.getElementById('place9').innerHTML=setx;
+		document.getElementById('place9').style.backgroundColor="white";		
+		document.getElementById('place9').style.color="black";		
+		setvalue=setvalue+1;
+		gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//	[1]check 1 2 3
+		if(gp1=='X'&&gp2=='X'&&gp3=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";		}
+//[2]check 4 5 6		
+		if(gp4=='X'&&gp5=='X'&&gp6=='X'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [3]check 7 8 9
+		if(gp7=='X'&&gp8=='X'&&gp9=='X'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [4]check 1 5 9		
+		if(gp1=='X'&&gp5=='X'&&gp9=='X'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [5]check 3 5 7
+		if(gp3=='X'&&gp5=='X'&&gp7=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [6]check 1 4 7
+		if(gp1=='X'&&gp4=='X'&&gp7=='X'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+// [7]check 2 5 8 		
+		if(gp2=='X'&&gp5=='X'&&gp8=='X'){
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}		
+// [8]check 3 6 9
+		if(gp3=='X'&&gp6=='X'&&gp9=='X'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			xs=xs+1;
+			document.getElementById('scorex').innerHTML="[x]Score-"+xs;
+			document.getElementById('diswinner').innerHTML="X player is WIN";
+		}
+		}
+		else{
+		document.getElementById('place9').style.color="white";			
+		document.getElementById('place9').style.backgroundColor="#555";					
+		document.getElementById('place9').innerHTML=seto;	
+		setvalue=setvalue+1;
+				gp1=document.getElementById('place1').textContent;
+		gp2=document.getElementById('place2').textContent;
+		gp3=document.getElementById('place3').textContent;
+		gp4=document.getElementById('place4').textContent;
+		gp5=document.getElementById('place5').textContent;
+		gp6=document.getElementById('place6').textContent;
+		gp7=document.getElementById('place7').textContent;
+		gp8=document.getElementById('place8').textContent;
+		gp9=document.getElementById('place9').textContent;
+//[1]check 1 2 3		
+		if(gp1=='O'&&gp2=='O'&&gp3=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place2').style.backgroundColor="lime";
+			document.getElementById('place2').style.color="black";
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[2]check 4 5 6 
+	if(gp4=='O'&&gp5=='O'&&gp6=='O'){
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+		os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[3] check 7 8 9
+		if(gp7=='O'&&gp8=='O'&&gp9=='O'){
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			document.getElementById('place8').style.backgroundColor="lime";
+			document.getElementById('place8').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[4] check 1 5 9		
+		if(gp1=='O'&&gp5=='O'&&gp9=='O'){
+ 			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+		os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[5] check 3 5 7
+		if(gp3=='O'&&gp5=='O'&&gp7=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place5').style.backgroundColor="lime";
+			document.getElementById('place5').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[6]check 1 4 7
+		if(gp1=='O'&&gp4=='O'&&gp7=='O'){
+			document.getElementById('place1').style.backgroundColor="lime";
+			document.getElementById('place1').style.color="black";
+			document.getElementById('place4').style.backgroundColor="lime";
+			document.getElementById('place4').style.color="black";
+			document.getElementById('place7').style.backgroundColor="lime";
+			document.getElementById('place7').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+		}
+//[7]check 2 5 8
+if(gp2=='O'&&gp5=='O'&&gp8=='O'){document.getElementById('place2').style.backgroundColor="lime";
+document.getElementById('place2').style.color="black";document.getElementById('place5').style.backgroundColor="lime";document.getElementById('place5').style.color="black";
+document.getElementById('place8').style.backgroundColor="lime";document.getElementById('place8').style.color="black";
+os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";}
+//[6]check 3 6 9
+		if(gp3=='O'&&gp6=='O'&&gp9=='O'){
+			document.getElementById('place3').style.backgroundColor="lime";
+			document.getElementById('place3').style.color="black";
+			document.getElementById('place6').style.backgroundColor="lime";
+			document.getElementById('place6').style.color="black";
+			document.getElementById('place9').style.backgroundColor="lime";
+			document.getElementById('place9').style.color="black";
+			os=os+1;
+			document.getElementById('scoreo').innerHTML="[o]Score-"+os;
+			document.getElementById('diswinner').innerHTML="O player is WIN";
+}}	
+		document.getElementById('place9').style.fontSize="17pt";}
+</script>
+</body>
+</html>
