@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Project-Ocean | Web developers in Chennai</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Manimaran K">
+	<meta name="keywords" content="Project-Ocean in Chennai, web developers in Chennai, Cheap rate websites, Free websites, Free Templates.">
+	<meta name="description" content="Project-Ocean is the best in top designing, developing websites &amp; web applications in chennai. We have top class developers &amp; designers at an affordable budget.">
+	<link rel="icon" type="image" href="images/icons/logo_t.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2&amp;display=swap" rel="stylesheet">
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<style type="text/css">
+
+	@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
+
+	*{
+		margin:0px;
+		padding:0px;
+		font-family:'Expletus Sans';
+	}
+	
+	p::selection,li::selection,a::selection,span::selection,b::selection,h1::selection{
+		background-color: rgba(0,82,80,.8);
+		color: #ddd;
+
+	}
+			#dis_msg_box{
+	padding:20px; 
+	margin:5px;
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	z-index:3;
+	text-align: center;
+	display: none;
+	font-size:10pt;
+	font-weight: bolder;
+	border-radius:5px;
+}
+	header{
+			position: relative;
+		top:0px;
+		left:0px;
+	height:70px;
+	width:100%;
+	padding:.5em 0em;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	transition:.5s;
+	z-index:1;
+	}
+	.top-progress{
+		position:fixed;
+		top: 0px;
+		left: 0px;
+		background-color:#ddd;
+		height:5px;
+		width: 100%;
+		z-index:2;
+	}
+	.top-progress-bar{
+		height:5px;
+		width:0%;
+	}
+	#scroll-bttn{
+		position:fixed;
+		bottom:20px;
+		right:20px;
+		color:#ddd;
+		background-color:rgba(0,82,80,.8);
+		padding:15px;
+		text-align:center;
+		display: none;
+		border-radius: 50px;
+		border:1px solid transparent;
+		transition: .3s;
+	}
+	#scroll-bttn:hover{
+		cursor: pointer;
+		background-color:rgba(256,256,256,.7);
+		color: rgb(0,82,81);
+		border-color: rgb(0,82,80);
+	}
+	header img{
+	width:150px;
+	margin-left:5px;
+	}
+	.menu{
+	width:50%;
+	margin-right:5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+		}
+	.menu ul{
+		color:rgba(0,80,82,.8);
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+		list-style: none;
+	}
+	.menu ul li:hover{
+		cursor: pointer;
+		color: rgba(0,82,80,1);
+//		font-weight: bolder;
+	}
+	 #menu_icon{
+	 	position: absolute;
+	 	top:0px;
+	 	right:0px;
+		font-size: 15pt;
+		color: rgb(0,82,80);
+		padding:30px 10px;
+		cursor: pointer;
+		visibility: hidden;
+	}
+	.menu ul li,.box_with_img b{
+		position: relative;
+		top: 0px;
+		left: 0px;
+		padding:5px 0px;
+		border: none;
+	}
+	.menu ul li:after,.box_with_img b:after{
+		position: absolute;
+		top:0px;
+		left:0px;
+		height:100%;
+		width:0%;
+		content: '';
+		border-bottom:2px solid rgb(0,82,80);
+		transition: .5s;
+	}
+	.menu ul li:hover:after,.box_with_img b:hover:after{
+		width: 100%;
+	}
+
+
+.banner{
+	width: 100%;
+	background-image:linear-gradient(to bottom,transparent,transparent,transparent,rgba(256,256,256,1)),url('images/pain_drop1.jpg');
+	background-attachment:scroll;
+		background-size:cover;
+		background-repeat: no-repeat;
+		display: flex;
+		justify-content:space-around;
+		align-items: center;
+}
+.banner .l,.r{
+	margin-top:15%;
+	flex: 2;
+}
+.banner img{
+	height:300px;
+	border-radius: 100%;
+	filter:drop-shadow(0px 10px 10px rgb(0,0,0,.8));
+}
+
+.banner .con{
+	padding:10px;
+	text-align: left;
+	color: rgba(0,0,0,.4)
+}
+.banner .con h1{
+	font-size:30pt;
+	font-family:'Exo 2';
+	letter-spacing: 2px;
+}
+
+.banner div div{
+	padding:20px 0px;
+	display:flex;
+	justify-content:flex-start;
+	align-items: center;
+}
+
+.banner div div h3{
+	font-size:20pt;
+}
+.banner #typing_effect{
+	padding-left:10px;
+	width:0%;
+	overflow: hidden;
+	white-space: nowrap;
+	color:rgb(0,82,80);
+	animation:typing 8s steps(20) infinite;
+	border-right:5px solid rgb(0,82,80);
+}
+@keyframes typing{
+			0%{
+				width:0%;
+			}
+			50%{
+				width:35%;
+			}
+			100%{
+			width:0%;
+			}
+		}
+@keyframes typing-effect{
+	0%{
+		width:0px;
+	}
+	100%{
+		width:200px;
+	}
+}
+.banner p{
+	font-size:15pt;
+	color:rgba(0, 0, 0, .5);
+}
+
+	.icons{
+		width:100%;
+		display: flex;
+		justify-content:space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		padding:40px 0px;
+	}
+	.icons div{
+		min-width:150px;
+		margin:10px;
+		padding:30px;
+		border-radius:10px;
+		text-align: center;
+		transition:.5s;
+	}
+	.icons div:hover{
+		cursor: pointer;
+		background-color: #fff;
+		box-shadow:4px -2px 20px 0px rgba(0, 0, 0, .3);
+	}
+
+	.icons img{
+		width:100px;
+	}
+	.icons p{
+		font-size:12pt;
+		font-weight: bolder;
+		color:rgba(0, 0, 0,.7);
+	}
+	.icons small{
+		font-size:10pt;
+		color:rgba(0, 0, 0,.4);
+}
+.bttn{
+	border: none;
+	height:40px;
+	width:150px;
+	background-color:transparent;
+	color:rgb(0,82,80,.7);
+	margin:10px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	transition: .5s;
+	transition-delay: .5s;
+}
+.bttn:hover{
+	cursor:pointer;
+	background-color:rgba(1,82,80,1);
+	color: #fff;
+}
+
+.bttn:before{
+	position:absolute;
+	top:0px;
+	left:0px;
+	content:'';
+	height:18px;
+	width:.2px;
+	border-top:2px solid rgb(0,82,80,.3);	
+	border-left:2px solid rgb(0,82,80,.3);	
+	padding:0px 10px;
+	transition: .5s;
+
+}
+.bttn:after{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	content:'';
+	height:18px;
+	width:.1px;
+	border-bottom:2px solid rgb(0,82,80,.3);	
+	border-right:2px solid rgb(0,82,80,.3);	
+	padding:0px 10px;
+	transition: .5s;
+}
+.bttn:hover:after,.bttn:hover:before{
+	height:91%;
+	width:83%;
+	border-color: rgba(0,82,80,1);
+}
+
+
+.box_with_img b{
+	color: rgba(0,0,0,.5);
+}
+.box_with_img b:hover{
+	color: rgb(0,82,80);
+	cursor: pointer;
+}
+.box_img{
+	height:300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.box_img p{
+	font-size: 3em;
+	color: #fff;
+	padding:0px 10px;
+	font-weight: 1000;
+}
+.box_img hr{
+	width:10%;
+	height:10px;
+	background-color:rgb(1, 82, 80);
+	border: none;
+}
+.box_content{
+	padding:0px 10px;
+	display: flex;
+	justify-content:space-around;
+	align-items: center;
+	flex-direction: column;
+	background-color: #fff;
+
+}
+.inner_container{
+	width: 100%;
+	display: flex;
+	justify-content:space-around;
+	align-items: center;
+	padding:50px 0px;
+}
+.box_content div div{
+	transition: .5s;
+}
+.box_content div div:hover{
+	cursor: pointer;
+}
+.inner_container big{
+	color: rgba(0, 0, 0, .6);
+	font-size:40pt;
+	padding:20px 0px;
+}
+.box_content p,.box_content .inner_content p,.box_with_img .extra-content{
+	width:70%;
+	padding:10px;
+	font-size:10pt;
+	letter-spacing:1px;
+	word-spacing: 2px;
+}
+.box_content sup,.box_content sub,.box_with_img .extra-content sup,.box_with_img .extra-content sub{
+	padding:0px 10px;
+	font-size:15pt;
+	font-weight:bold;
+	color: rgba(0,82,80,.5);
+}
+.box_content img{
+	width:50%;
+}
+.box_content div h5{
+	padding:10px 0px;
+	font-size:12pt;
+	border-bottom:2px solid rgba(0,82,80,.5);
+}
+.box_content .bar-container{
+	width:90%;
+}
+.box_content .bar-container h3{
+	color:#555;
+	border-bottom:2px solid rgba(0, 0, 0, .5);
+}
+.box_content .bar-container span{
+	font-size:10pt;
+}
+
+.box_content .process-bar{
+	width: 100%;
+	height:10px;
+	background-color:#ddd;
+	margin:10px 0px;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: right;
+	border:.2px solid rgba(0, 0, 0, .1);
+	border-radius:50px;
+}
+.box_content .process-bar .bar{
+	height:100%;
+	border-radius:50px;
+color:#000;
+background-color: rgba(0,82,80,.7);
+}
+
+.footer_content{
+			display: flex;
+			justify-content:space-around;
+			align-items: center;
+		}
+			.c1{
+				height: 100%;
+				width:100%;
+				display: flex;
+				justify-content:space-evenly;
+				align-items: center;
+			}
+			.c1 div{
+				width: 100%;
+				height: 100%;
+			}
+			.c1 p{
+				width:95%;
+				color: #333;
+				padding:10px 5px;
+				font-weight: bolder;
+				border-bottom:3px solid rgba(0, 0, 0, .3);
+			}
+			.c1 ul{
+				list-style: none;
+				width:95%;
+			}
+
+
+			.c1 li,a{
+				text-decoration: none;
+				font-size:10pt;
+			padding:10px 2px;
+				transition: .3s;
+				color:#555;
+			}
+			.c1 li:hover{
+				background-color:rgba(0, 0, 0, .1);
+				cursor: pointer;
+				font-weight: bold;
+			}
+
+			.c1 li span{
+				font-size:12pt;
+				padding:0px 5px;
+				color: #555;
+			}
+			
+	</style>
+	
+</head>
+<body>
+<div class="top-progress">
+	<div class="top-progress-bar"></div>
+</div>	
+
+<span class="fa fa-arrow-up" id="scroll-bttn" onclick="document.location='#scroll-to-top';" title="Top"></span>
+<a name="scroll-to-top" style="position:absolute;top:0px;left:0px;"></a>
+<header>
+	<img src="images/icons/po_title.png">
+	<nav class="menu">
+		<ul>
+			<li onclick="document.location='#scroll-to-top';">Home</li>
+			<li onclick="document.location='#my-skill';">About</li>
+			<li onclick="document.location='#templates';">Templates*</li>
+			<li onclick="document.location='#templates';">Contact as</li>
+			<li>Join</li>
+		</ul>
+	</nav>
+	<span class="fa fa-bars" id="menu_icon" onclick="op_menu()"></span>
+</header>
+
+<section>
+	<div class="banner">
+		<div align="center" class="l">
+			<img src="images/po_founder.png"><br><br>
+			<h1 style="color: rgba(0,81,80,.5)">Founder</h1>
+		</div>
+		<div class="con r">
+			<p>Hello, My name is</p><br>
+			<h1 id='myname'>Mani Maran</h1>
+			<div><h3>and I'm a <h3 id='typing_effect'>Web Designer . . .</h3></h3></div><br>
+			<a  href="#get-start"><button class="bttn">Get Start&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></button></a>
+		</div>
+		
+	</div>
+	<div class="icons">
+			<div title="Assurance">
+				<img src="images/icons/assurance.png">
+				<p>Quality</p>
+				<small>We give 100% assurance.</small>
+			</div>
+			<div title="Our projects">
+				<img src="images/icons/num_of_project.png">
+				<p>Projects</p>
+				<small>We done 30+ projects.</small>
+			</div>
+			<div title="Best Service">
+				<img src="images/icons/best_service.png">
+				<p>Best Service</p>
+				<small>Work with latest technologies.</small>
+			</div>
+			<div title="Fast Delivery">
+				<img src="images/icons/fast_delivery.png">
+				<p>Fast Delivery</p>
+				<small>Submit your work within a planned day.</small>
+			</div>
+			<div title="Happy Clients">
+				<img src="images/icons/happy_client.png">
+				<p>Happy Client</p>
+				<small>We have 30+ Happy Clients.</small>
+			</div>
+	</div>
+
+
+	<div class="box_with_img  ">
+		<div class="box_img"  style="background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.7)), url('images/goal.jpg') no-repeat fixed;background-size: cover;">
+			<hr><p>Our Goal&nbsp;<span class="fa fa-bullseye"></span>  - Features&nbsp;<span class="fa fa-book"></span></p><hr>
+		</div>
+		<div class="box_content">
+			<div class="inner_container">
+				<div>
+					<h5>Goal</h5>
+					<p><sup class="fa fa-quote-left"></sup>We offer modern solution for growthing your business in online. We deliver all web-based solutions to small startups as well as medium and large enterprises. We specialized in Business website, Domain name & Hosting Registration for business. Our developers keep an eye on the client’s requirements and commit to deliver projects successfully in time.<sub class="fa fa-quote-right"></sub></p>
+				</div>
+				<img src="images/illu_img/our_goal.png">
+			</div>
+			<div class="inner_container">	
+				<img src="images/illu_img/feature.png">
+
+				<div>
+					<h5>Features</h5>
+					<p><sup class="fa fa-quote-left"></sup>We use only the latest technologies to ensure the layout is highly flexible, working on different devices and platforms without a hitch. A few of the other features are testimonials, a sticky menu, logo slider, skillbars and services section. If you would like to showcase your location, you can do that, too, with the integration of Google Maps.<sub class="fa fa-quote-right"></sub></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<a name="my-service"></a>
+	<div class="box_with_img">
+				<div class="box_img"style="background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.7)), url('images/plan.jpg') no-repeat fixed;background-size: cover;">
+			<hr><p>My Service&nbsp;<span class="fa fa-gears"></span></p><hr>
+
+		</div>
+		<center>
+			<br>
+		<b>What i provide</b>
+	</center>
+		<div class="box_content">
+			<div class="inner_container">
+				<div>
+				<div class="service_txt">
+					<big class="fa fa-file-code-o"></big>
+					<h5 style="border:none">Front-end & Back-end Developing</h5>
+					<p><sup class="fa fa-quote-left"></sup>I like to code things from scratch, and enjoy bringing ideas to life in the browser.<sub class="fa fa-quote-right"></sub><br><br><br><br><button class="bttn">Learn More&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></button></p>
+				</div>
+				<div  class="service_txt">
+					<big class="fa fa-arrows-h"></big>
+					<h5 style="border:none">Reponsive Page</h5>
+					<p><sup class="fa fa-quote-left"></sup>We use only the latest technologies to ensure the layout is highly flexible, working on different devices and platforms without a hitch. A few of the other features.<sub class="fa fa-quote-right"></sub><br><br><br><br><button class="bttn">Learn More&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></button></p>
+				</div>
+				</div>	
+
+				<div>
+				<div  class="service_txt">
+					<big class="fa fa-paint-brush"></big>
+					<h5 style="border:none">Designing</h5>
+					<p><sup class="fa fa-quote-left"></sup>I value simple content structure, clean design patterns, and thoughtful interactions.<sub class="fa fa-quote-right"></sub><br><br><br><br><button class="bttn">Learn More&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></button></p>
+				</div>
+				<div  class="service_txt">
+					<big class="fa fa-check-circle"></big>
+					<h5 style="border:none">Clean Code</h5>
+					<p><sup class="fa fa-quote-left"></sup>Our themes have the best coding standards in place and they are reviewed by experience designers. We promise performance, simplicity and error free experience.<sub class="fa fa-quote-right"></sub><br><br><br><br><button class="bttn">Learn More&nbsp;&nbsp;<span class="fa fa-chevron-right"></span></button></p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<a name="my-skill"></a>
+	<div class="box_with_img">
+		<div class="box_img" style="background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.7)), url('images/learn.jpg') no-repeat fixed;background-size: cover;">
+			<hr><p>My Skills&nbsp;<span class="fa fa-bar-chart"></span></p><hr>
+		</div>
+		<center><br>
+		<b>My Creative Skills & Expriences.</b>
+		<p class="extra-content"><sup class="fa fa-quote-left"></sup>Hard-working web developer with a flair for creating elegant solutions in the least amount of time. Developed an ecommerce webapp, customer web portal, documentary launch website, and donations webapp for a local charity. Passionate about full stack developer. Regular attendee of web developer meetups and hackathons.<sub class="fa fa-quote-right"></sub></p>
+	</center>
+		<div class="box_content">
+			<div class="inner_container">
+				<div class="bar-container">
+					<h3>My Skills</h3>
+					<br>
+					<span>HTML - 85%</span>
+					<div class='process-bar'><div class="bar" style="width:85%;"></div></div>
+					<span>CSS - 80%</span>
+					<div class='process-bar'><div class="bar" style="width:80%;"></div></div>
+					<span>JS & JQuery - 70%</span>
+					<div class='process-bar'><div class="bar" style="width:70%;"></div></div>
+					<span>MySQL - 60%</span>
+					<div class='process-bar'><div class="bar" style="width:60%;"></div></div>
+					<span>PHP - 65%</span>
+					<div class='process-bar'><div class="bar" style="width:65%;"></div></div>
+				</div>
+				<img src="images/illu_img/dev_img2.png">
+			</div>	
+		</div>
+	</div>
+
+<!-- <a name="templates"></a>
+<div class="box_with_img  ">
+		<div class="box_img"  style="background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.7)), url('images/template.jpg') no-repeat fixed;background-size: cover;">
+			<hr><p>Templates&nbsp;&nbsp;<span class="fa fa-th"></span></p><hr>
+		</div>
+		<center>
+		<div class="box_content">
+			<div class="inner_container templates_demo">
+				<div>
+					<br>
+					<b>Personal sites</b><br>
+					<h6>Creative and Attracttive Personal Site templates. - Portfolio, About, Skills.</h6>
+					<button class="like-bttn"><span class="fa fa-share"></span><span>Share</span></button>
+					<button class="view-bttn" onclick="op_link('templates/','_self')"><span class="fa fa-eye"></span>View</button>
+				</div>
+				<div>
+					<br>
+					<b>Business sites</b><br>
+					<h6>Creative and Attracttive Business Site templates. - Business Ideas, Company Ad.</h6>
+					<button class="like-bttn"><span class="fa fa-share"></span><span>Share</span></button>
+					<button class="view-bttn" onclick="op_link('templates/','_self')"><span class="fa fa-eye"></span>View</button>
+				</div>
+				<div>
+					<br>
+					<b>E-Commerce sites</b><br>
+					<h6>Creative and Attracttive E-Commerce Site templates. - Shopping Site, Online Store.</h6>
+					<button class="like-bttn"><span class="fa fa-share"></span><span>Share</span></button>
+					<button class="view-bttn" onclick="op_link('templates/','_self')"><span class="fa fa-eye"></span>View</button>
+				</div>
+				<div>
+					<br>
+					<b>Web Application</b><br>
+					<h6>Creative and Attracttive Web Application. - Chatting App, Online Booking.</h6>
+					<button class="like-bttn"><span class="fa fa-share"></span><span>Share</span></button>
+					<button onclick="op_link('templates/','_self')"><span class="fa fa-eye"></span>View</button>
+				</div>
+			</div>
+		</div>
+		<button class="bttn" onclick="op_link('templates/','_self')">View More</button>
+	</center>
+	<br><br>
+	</div> -->
+
+
+
+	<a name="get-start"></a>
+
+	<div class="box_with_img">
+		<div class="box_img" style="background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.7)), url('images/dev1.png') no-repeat fixed;background-size: cover;">
+			<hr><p>Order Now&nbsp;<span class="fa fa-shopping-cart"></span></p><hr>
+		</div>
+		<center><br>
+		<b>Order Your Website Now.</b>
+		<p class="extra-content"><sup class="fa fa-quote-left"></sup>Hard-working web developer with a flair for creating elegant solutions in the least amount of time. Developed an ecommerce webapp, customer web portal, documentary launch website, and donations webapp for a local charity. Passionate about full stack developer. Regular attendee of web developer meetups and hackathons.<sub class="fa fa-quote-right"></sub></p>
+	</center>
+
+	<style type="text/css">
+	#order_your_site{
+		padding:10px;
+	}
+	#order_your_site_container{
+		width:50%;
+	}
+	#order_your_site span{
+		font-weight:bolder;
+		color: rgb(0,82,80);
+	}
+
+	#order_your_site textarea,input[type='text']{
+		outline: none;
+		border: none;
+		padding:10px 0px;
+		width:100%;
+		border-bottom:1px solid rgb(0,82,80,.3);
+	}
+	#order_your_site textarea:focus-within,input[type='text']:focus-within{
+		animation:line-c-ch 1s linear infinite;
+	}
+	@keyframes line-c-ch{
+		0%{
+		border-color:rgba(0,82,80,.9);
+		}
+		50%{
+		border-color:rgba(0,82,80,.1);
+		}
+		100%{
+		border-color: rgba(0,82,80,.9);
+		}
+	}
+	#order_your_site input[type='button'],input[type='reset']{
+		outline: none;
+		border: none;
+		padding:10px;
+		width:100px;
+		background-color:rgba(0, 0, 0, .2);
+	}
+	#order_your_site input[type='button']:hover,input[type='reset']:hover{
+		cursor:pointer;
+		background-color:rgba(0,82,80,.8);
+		color: #fff;
+	}
+
+
+	#order_your_site input[type='radio']{
+		display:none;
+	}
+	#order_your_site label{
+		font-size:10pt;
+		color: rgba(0,82,80,.9);
+		padding:10px;
+		border:.3px solid rgb(0,81,80);
+		margin:3px;
+	}
+	#order_your_site label:hover{
+		cursor: pointer;
+	}
+	.category{
+		display:flex;justify-content: center;align-items:center;flex-wrap: wrap;
+	}
+#subject_type1:checked ~ #s_t1,
+#subject_type2:checked ~ #s_t2,
+#subject_type3:checked ~ #s_t3,
+#subject_type4:checked ~ #s_t4,
+#subject_type5:checked ~ #s_t5,
+#subject_type6:checked ~ #s_t6,
+#subject_type7:checked ~ #s_t7{
+	background-color:rgba(0,82,80,.9);
+	color: #ddd;
+}
+	</style>
+		<div class="box_content">
+			<div id="order_your_site_container">
+				<form id="order_your_site" method="post">
+					<span>Name</span>
+					<br><br>
+					<div>
+						<input type="text" name="" required="yes">
+					</div>
+					<br>
+					<span>Subject</span>
+					<br><br>
+					<div class="category">
+						<input type="radio" name="subject_type" id="subject_type1" value="Business Sites">
+						<label for="subject_type1" id="s_t1">Business Site</label>
+						<input type="radio" name="subject_type" id="subject_type2" value="Personal Sites">
+						<label for="subject_type2" id="s_t2">Personal Site</label>
+						<input type="radio" name="subject_type" id="subject_type3" value="E-Commerce Sites">
+						<label for="subject_type3" id="s_t3">E-Commerce Sites</label>
+						<input type="radio" name="subject_type" id="subject_type4" value="College Projects">
+						<label for="subject_type4" id="s_t4">College Projects</label>
+						<input type="radio" name="subject_type" id="subject_type5" value="Front End Work">
+						<label for="subject_type5" id="s_t5">Front End Work</label>
+						<input type="radio" name="subject_type" id="subject_type6" value="Back End Work">
+						<label for="subject_type6" id="s_t6">Back End Work</label>
+						<input type="radio" name="subject_type" id="subject_type7" checked value="Other">
+						<label for="subject_type7" id="s_t7">Other</label>
+					</div>
+					<br><br>
+					<span>Message</span>
+					<br><br>
+					<div>
+						<textarea id="message" required="yes"></textarea>
+					</div><br>
+					<div style="text-align:center;">
+						<input type="reset" name="">
+						<input type="button" name="" value="Send">
+					</div>
+				</form>
+			</div>	
+			<br><br>
+		</div>
+	</div>
+
+<style type="text/css">
+.inner_container div{
+	flex: 1;
+}
+
+		.inner_container .service_txt{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			flex-direction: column;
+		}
+		.inner_container .service_txt:hover{
+			background-color:rgba(180,180,180,.3);
+		}
+
+		.inner_container big{
+			color:rgba(0,82,80,.7);
+			padding:30px 0px;
+		}
+		.inner_container h5{
+			color: rgba(0,0,0,.8);
+		}
+
+.templates_demo div{
+	background-color:#fff;
+	height:100%;
+	margin:10px;
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 10px;
+}
+.templates_demo div:hover{
+	background-color:rgba(0, 0, 100,.1);
+}
+.templates_demo h6{
+	margin:40px 5px;
+	font-size:9pt;
+	font-weight: bolder;
+	color: #555;
+}
+
+/*.templates_demo img{
+	opacity:.5;
+	transition: .3s;
+	width: 100%;
+}
+.templates_demo img:hover{
+	cursor: pointer;
+	opacity:1;
+}*/
+.templates_demo button{
+	outline:none;
+	border: none;
+	padding:5px 10px;
+	color: #ddd;
+	background-color:rgb(0,82,80);
+	border:1px solid transparent;
+	transition: .3s;
+	font-weight: bold;
+	margin-bottom:10px;
+}
+.templates_demo button:hover{
+	background-color:#ddd;
+	cursor: pointer;	
+	color: rgb(0,82,80);
+	border-color: rgb(0,82,80);
+}
+
+
+.templates_demo span{
+	padding:5px;
+}
+
+.feedback_txt{
+	height:300px;
+	margin:10px;
+	border:.1px solid rgba(0,82,81,.2);
+	border-radius: 10px;
+	box-shadow:5px 5px 15px 0px rgba(0, 0, 0, .2);
+	background-color:rgba(0,82,80,.1);
+}
+
+.feedback_txt p{
+	padding:5px;
+	font-size:.8em;
+}
+
+
+.feedback_txt img{
+	margin:10px;
+	width: 100px;
+	border-radius: 50%;
+	transition: .3s;
+}
+
+	.inner_container h6{
+		padding:0px 10px;
+		color:#666;
+	}
+
+.feedback_txt:hover{
+box-shadow:5px 5px 10px 0px transparent;
+background-color:rgba(0,82,80,1);
+color: #fff;
+}
+@media only screen and (max-width:865px){
+	.footer_content{
+		flex-direction: column;
+	}
+}
+@media only screen and (max-width:720px){
+	.banner{
+		flex-direction: column;
+	}
+	.inner_container,.footer_content{
+		flex-direction: column;
+	}
+	.c1{
+		width: 100%;
+	}
+	.banner .con p{
+		font-size:11pt;
+	}
+	.banner .con h1{
+		font-size:2.5em;
+	}
+	.banner .con h3{
+		font-size:1.5em;
+	}
+	#order_your_site_container{
+		width: 100%;
+	}
+	.box_img p{
+		font-size:2em;
+	}
+
+}
+@media only screen and (max-width:650px){
+		.banner .l{
+		margin-top:30%;
+	}
+	.banner .l img{
+		height:180px;
+	}
+	header img{
+margin-top:20px;
+	}
+	header{
+		flex-direction: column;
+		background-color:#fff;
+	}
+	#menu_icon{
+		visibility: visible;
+	}
+	.menu{
+		width: 100%;
+	}
+	.menu ul{
+		visibility: hidden;
+		width: 100%;
+		margin-top:10px;
+		flex-direction: column;
+		background-color:#fff;
+			box-shadow:0px 10px 10px 0px rgba(0, 0, 0, .2);
+			padding:20px 0px;
+	}
+	.menu ul li{
+		padding:10px 0px;
+	}
+}
+
+@media only screen and (max-width:500px){
+
+	.c1{
+		flex-direction: column;
+	}
+	.box_img{
+		height:200px;
+	}
+	.box_img p{
+		font-size:1em;
+	}
+	.box-content .bar-container{
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width:350px){
+
+.banner .con p{
+		font-size:8pt;
+	}
+	.banner .con h1{
+		font-size:1.5em;
+	}
+	.banner .con h3{
+		font-size:1em;
+	}	
+}
+
+.feedback_container{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction:column;
+	margin:50px 0px;
+}
+.feedback_container form{
+	width:90%;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+.feedback_container h1{
+	color: rgb(1,80,82);
+	margin:20px 0px;
+}
+.feedback_container input[type='email'],input[type='submit']{
+	font-weight: bolder;
+	letter-spacing:1px;
+	padding:10px 5px;
+	border:1px solid rgba(0, 0, 0, .8);
+	transition: .5s;
+	padding-left:10px;
+}
+.feedback_container input[type='submit']{
+	background-color:rgba(1,80,81,1);
+	color:#fff;
+}
+.feedback_container input[type='submit']:hover{
+	background-color:#fff;
+	color:rgb(1,80,81);	
+	cursor: pointer;
+	font-weight:bolder;
+}
+
+
+
+
+	</style>
+	<div class="box_with_img" style="background-color:transparent">
+		<div class="box_img" style="background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.7)), url('images/happy_clients.jpg') no-repeat fixed;background-size: cover;">
+			<hr><p>What Client Says&nbsp;<span class="fa fa-users"></span></p><hr>
+		</div>
+		<center>
+			<br><b>Testimonials</b>
+		<p class="extra-content"><sup class="fa fa-quote-left"></sup>We love hearing feedback from our customers thank you for taking time to share your experience! #CustomerTestimonial.<sub class="fa fa-quote-right"></sub></p>
+		<div class="box_content">
+			<div class="inner_container">
+				<div class="feedback_txt">
+					<img src="images/client_img/c1.jpeg">
+					<div>
+						<p>We have very busy schedules and didn’t have time to wait for a project, But the entire Project-Ocean team was very accomodating</p>
+						<br>
+						<h4>Aadinadh</h4>
+						<h6>Chennai</h6>
+						<br>
+					</div>
+				</div>
+				<div class="feedback_txt">
+					<img src="images/client_img/c2.jpg">
+					<p>Our dream site Msinterior is exactly what we wanted</p>
+					<div>
+						<br>
+						<h4>Saalim</h4>
+						<h6>Chennai</h6>
+						<br>
+					</div>
+				</div>
+				<div class="feedback_txt">
+					<img src="images/client_img/c3.jpg">
+					<p>We’d visualised a minimalist concept like this and Project-Ocean team successfully delivered it</p>
+					<div>
+						<br>
+						<h4>Dallan</h4>
+						<h6>Chennai</h6>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</center>		
+	</div>
+
+
+		<div class="feedback_container">
+			<h1 style="font-family:'Exo 2';">Please Subscribe For More Updates.</h1><br>
+			<form>
+				<input type="email" name="" placeholder="Enter Your Email" id="feedback_content" required="true">				
+				<input type="submit" name="" value="Send Feedback">
+			</form>			
+		<br><br><br>
+		</div>
+
+
+	<div class="box_with_img">
+		<div class="box_img" style="background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.7)), url('images/get_touch.jpg') no-repeat fixed;background-size: cover;">
+			<hr><p>Link with as</p><hr>
+		</div>
+		<br><br><br>
+		<a name="contact-as"></a>
+		<div class="footer_content">
+			<div class="c1">
+				<div>
+					<p>Contact info</p>
+					<ul>
+						<li title="Address"><span class="fa fa-map-marker"></span><a href='#'>Thiruneermalai, Chennai-44.</a></li>
+						<li title="E-Mail"><span class="fa fa-envelope"></span><a href='#'>projectocean101@gmail.com</a></li>
+						<li title="Location"><span class="fa fa-map-marker"></span><a href='https://goo.gl/maps/ApKEifM2QQLv5yhK7' target="blank">Find My Current Location</a></li>
+						<li title="Mobile Number"><span class="fa fa-mobile"></span><a href='#'>+91 98408 16xxx</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<p>Social Medias</p>
+					<ul>
+						<li title="Whatsapp"><span class="fa fa-whatsapp"></span><a href='#'>Whatsapp</a></li>
+						<li title="Instagram"><span class="fa fa-instagram"></span><a href='#'>Instagram</a></li>
+						<li title="Telegram"><span class="fa fa-telegram"></span><a href='#'>Telegram</a></li>
+						<li title="Facebook"><span class="fa fa-facebook-official"></span><a href='#'>Facebook</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="c1">
+				<div>
+					<p>What we do</p>
+					<ul>
+						<li title="Designing" onclick="document.location='#my-service';"><span class="fa fa-paint-brush"></span>Designing</li>
+						<li title="Developing" onclick="document.location='#my-service';"><span class="fa fa-code"></span>Developing</li>
+						<li title="Hosting" onclick="document.location='#my-service';"><span class="fa fa-database"></span>Hosting</li>
+						<li title="Logo Creation" onclick="document.location='#my-service';"><span class="fa fa-ils"></span>Logo Designing</li>
+					</ul>
+				</div>
+
+				<div>
+					<p>Menu</p>
+					<ul>
+						<li title="Home" onclick="document.location='#scroll-to-top';"><span class="fa fa-home"></span>Home</li>
+						<li title="About" onclick="document.location='#my-skill';"><span class="fa fa-address-card"></span>About</li>
+						<li title="Templates" onclick="document.location='#templates';"><span class="fa fa-file"></span>Templates*</li>
+						<li title="Join"><span class="fa fa-user-plus"></span>Join</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<footer>
+	<div style="font-size:10pt">
+<p style="text-align: center;padding: 10px;"><span style="color:rgb(0,82,80);font-weight: bold;">ProjectOcean</span>, 2021  - Alrights reserved <span class="fa fa-copyright"></span></p>
+	</div>
+</footer>
+	<div id="dis_msg_box">
+	<div id="msg_content_to_display"></div>
+<script type="text/javascript">
+	$(document).ready(function(){
+			$(window).scroll(function(){
+				if(this.scrollY > 100){
+					$('#scroll-bttn').css('display','block');
+				}
+				else{
+					$('#scroll-bttn').css('display','none');
+				}
+				top_progress_bar($('body').innerHeight(),window.scrollY);
+			});
+
+			var point_value,absolute_value;
+			function top_progress_bar(height,scroll_pos){
+				point_value=(scroll_pos/height)*100;
+				absolute_value=(Math.floor(point_value)+10);
+				absolute_value
+				$('.top-progress-bar').css('width',absolute_value+'%');
+				//$('.top-progress-bar').css('background','repeat linear-gradient(45deg,red,blue)');
+				$('.top-progress-bar').css('background-color','rgba(0,82,80,.'+(Math.floor((absolute_value))==100?9:absolute_value)+')');
+
+			}
+
+			var typing=['Front-End Dev . . .','Back-End Dev . . .','UI/UX Developer . . ','Web Designer . . .'];
+			var incr=0;
+			setInterval(function(){
+				$('#typing_effect').html(typing[incr]);
+				if(incr==typing.length-1){
+					incr=0;
+				}
+				else{
+					incr+=1;
+				}
+			},8000);
+			
+		});
+
+
+
+	//dis_msg_box('#fff','red','Type your message',1);
+
+	function dis_msg_box(color,bgcolor,content,status){
+		$('#dis_msg_box').fadeIn(500);
+		$('#dis_msg_box').css('background-color',bgcolor);
+		$('#dis_msg_box').css('color',color);
+		content=(status==0)?"<b class='fa fa-check-circle-o' style='font-size:10pt'></b>&nbsp;&nbsp;"+content:"<b class='fa fa-times-circle-o' style='font-size:10pt'></b>&nbsp;&nbsp;"+content;
+		$('#msg_content_to_display').html(content);
+		setTimeout(function(){
+		$('#dis_msg_box').fadeOut(500);	
+		},2000);
+	}
+
+var incr=0;
+function op_menu(){
+	if(incr%2==0){
+		$('header .menu ul').css('visibility','visible');
+		$('#menu_icon').removeClass();
+		$('#menu_icon').addClass('fa fa-close');
+		$('#menu_icon').css('color','red');
+	}
+	else{
+		$('header .menu ul').css('visibility','hidden');
+		$('#menu_icon').removeClass();
+		$('#menu_icon').addClass('fa fa-bars');
+		$('#menu_icon').css('color','rgb(0,82,80)');
+	}
+	incr+=1;
+}
+
+function op_link(x1,x2){
+	window.open(x1,x2);
+}
+
+</script>
+<style type="text/css">
+
+</style>
+</body>
+</html>
